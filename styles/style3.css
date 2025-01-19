@@ -21,7 +21,8 @@ body{
     grid-template-areas:
     'header header header header header'
     'imageA imageA imageA imageA imageA'
-    'boxes boxes schedule schedule schedule'
+    'retreat-schedule retreat-schedule retreat-schedule retreat-schedule retreat-schedule'
+    'schedule-day schedule-day schedule-day schedule-day schedule-day'
     'newsletterArea newsletterArea newsletterArea newsletterArea newsletterArea'
     'footer footer footer footer footer'
     ;
@@ -112,20 +113,49 @@ border-radius: 10px;
     padding: 1rem;
     text-align: center;
 }
-.boxes{
-    grid-area: boxes;
-    height: 150vh;
-    border: #333 solid 1px;
-    padding: 5px 8px;
-}
-.schedule{
-    grid-area: schedule;
-    height: 150vh;
-    border: #333 solid 1px;
-    padding: 5px 8px;
+.retreat-schedule {
+    grid-area: retreat-schedule;
+    width: 100vw;
+    padding: 5rem;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+.retreat-schedule h1 {
     text-align: center;
-    font-size: 2rem;
-}
+    color: #b65830;
+  }
+  
+.retreat-schedule  h2 {
+    color: #633929;
+  }
+  
+.retreat-schedule p {
+    text-align: center;
+  }
+  
+.schedule-day {
+    grid-area: schedule-day;
+    padding-bottom: 3rem;
+  }
+  
+.schedule-day h2 {
+    border-bottom: 2px solid #809671;
+    padding-bottom: 3rem;
+ }
+  
+.schedule-day  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+.schedule-day  ul li {
+    padding: 5px 0;
+    color: #e5d2b8;
+  }
+  
 .newsletterArea{
     grid-area: newsletterArea;
     background-image: url('../images/two-women-sitting-lotus-position-yoga-mat-front-window_1258-296381.jpg');
@@ -133,7 +163,7 @@ border-radius: 10px;
     background-position: center;
     border: #333 solid 1px;
     width: 100vw;
-    height: 55vh;
+    height: 65vh;
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 .newsletterBox{
@@ -143,7 +173,7 @@ border-radius: 10px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     width: 30%;
     position: relative;
@@ -153,6 +183,13 @@ border-radius: 10px;
     background-color: #837d75b6;
     border-radius: 15px;
     padding: 1rem;
+}
+.newsletterBox input[type="email"] {
+    width: 50%;
+    padding: 0.2rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+
 }
 .footer{
     grid-area: footer;
