@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles/basics.css">
     <link rel="stylesheet" href="styles/style5.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
@@ -16,7 +17,7 @@
        <div class="container">
            <div class="logo">
                <a href="index.html">
-                   <img src="images/logoipsum-215.svg">
+                   <img src="images/logo.svg">
                </a>
            </div>
            <div class="navbar">
@@ -70,7 +71,7 @@
 
 <div class="contactForm">
     <h2>Contact Form</h2>
-    <form action="action_page.php">
+    <form id="contactForm" action="index.html" autocomplete="off">
 
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your first name">
@@ -80,6 +81,15 @@
     
         <label for="mail">E-mail</label>
         <input type="text" id="mail" name="mail" placeholder="Your e-mail">
+
+        <label for="confirmMail">Confirm your E-mail</label>
+        <input type="text" id="confirmMail" name="confirmMail" placeholder="Confirm your e-mail">
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" placeholder="Your address">
 
         <label for="country">Country</label>
         <select id="country" name="country">
@@ -112,7 +122,7 @@
         <div class="columns">
            <div class="box1">
                <div class="logo">
-                       <img src="images/logoipsum-215.svg">
+                       <img src="./images/logo.svg">
                 </div>
                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa delectus culpa laudantium nulla corrupti, impedit sapiente ipsum quia dolores, veritatis explicabo possimus nesciunt? Magni, quos.</p>
                <div class="socialMedia">

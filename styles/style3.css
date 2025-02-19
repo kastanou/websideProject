@@ -1,21 +1,4 @@
-:root {
-  --primary-color: #9b948a;
-  --secondary-color: #6a6354;
-  --the-green-color: #809671;
-  --the-vanilla-color: #e5d2b8;
-}
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style-type: none;
-  box-sizing: border-box;
-  font-family: "Oswald", serif;
-  color: #fefce2;
-}
-
 body {
-  background-color: var(--secondary-color);
   display: grid;
   grid-template-areas:
     "header header header header header"
@@ -26,71 +9,6 @@ body {
     "footer footer footer footer footer";
 }
 
-.header {
-  grid-area: header;
-  width: 100%;
-  height: 120px;
-  display: block;
-  background-color: var(--primary-color);
-  text-align: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.logo img {
-  padding: 25px;
-}
-.navbar ul li {
-  display: inline-block;
-  margin: 5px;
-  padding: 2px;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 35px;
-}
-.navbar li:hover {
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-}
-.socialMedia {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-.socialMedia ul li {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  padding-right: 10px;
-}
-.socialMedia ul li:hover {
-  opacity: 0.6;
-}
-.btn {
-  background-color: #c06b32;
-  color: white;
-  padding: 5px 8px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  transition: 0.3s ease;
-  max-width: 8rem;
-}
-.btn:hover {
-  background-color: #eb6341;
-}
 .startImage {
   grid-area: startImage;
   background-image: url("../images/yoga-mats-spread-out-vibrant-green-field-beautiful-park.jpg");
@@ -105,8 +23,9 @@ body {
   left: 15%;
   top: 25%;
   width: 15%;
-  border: #837d75 solid 1px;
-  background-color: #837d756b;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
+  color: var(--the-text-color);
   border-radius: 15px;
   padding: 1rem;
   text-align: center;
@@ -115,7 +34,8 @@ body {
   grid-area: retreat-schedule;
   width: 100vw;
   padding: 5rem;
-  background-color: var(--secondary-color);
+  color: var(--the-text-color);
+  background-color: var(--the-secondary-blue-color);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -123,35 +43,53 @@ body {
 
 .retreat-schedule h1 {
   text-align: center;
-  color: #b65830;
+  font-size: 30px;
+  color: var(--button-color);
 }
-
-.retreat-schedule h2 {
-  color: #633929;
-}
-
 .retreat-schedule p {
   text-align: center;
+  color: var(--the-text-color);
+  font-size: 18px;
+  margin-bottom: 5rem;
+}
+.date {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event {
+  background: var(--the-transparent-color);
+  border-left: 4px solid white;
+  margin-left: 6rem;
+  width: 850px;
+  margin-bottom: 6rem;
 }
 
 .schedule-day {
   grid-area: schedule-day;
-  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
 }
 
 .schedule-day h2 {
-  border-bottom: 2px solid #809671;
-  padding-bottom: 3rem;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 1rem;
+  margin-left: 4rem;
 }
 
 .schedule-day ul {
   list-style-type: none;
-  padding: 0;
+  padding: 1rem;
+  margin-left: 4rem;
 }
 
 .schedule-day ul li {
-  padding: 5px 0;
-  color: #e5d2b8;
+  color: var(--the-text-color);
+  text-align: left;
+  font-size: large;
+  line-height: 2rem;
 }
 
 .newsletterArea {
@@ -159,10 +97,10 @@ body {
   background-image: url("../images/two-women-sitting-lotus-position-yoga-mat-front-window_1258-296381.jpg");
   background-size: cover;
   background-position: center;
-  border: #333 solid 1px;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
   width: 100vw;
-  height: 65vh;
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+  height: 55vh;
 }
 .newsletterBox {
   z-index: 2;
@@ -177,77 +115,14 @@ body {
   position: relative;
   left: 15%;
   top: 25%;
-  border: #837d75 solid 1px;
-  background-color: #837d75b6;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
   border-radius: 15px;
   padding: 1rem;
 }
 .newsletterBox input[type="email"] {
   width: 50%;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border: 1px solid #333;
   border-radius: 4px;
-}
-.footer {
-  grid-area: footer;
-  width: 100%;
-  height: 250px;
-  display: block;
-  background-color: var(--primary-color);
-  text-align: center;
-}
-.box2 img {
-  height: 20px;
-  width: 20px;
-}
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.box1 {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-.box1 p {
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.box2 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box2 li {
-  padding: 0.5rem;
-}
-.box3 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box3 li {
-  padding: 0.3rem;
-}
-.box4 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box4 li {
-  padding: 0.3rem;
-}
-.rowEnd {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.policyTerms {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }

@@ -1,21 +1,4 @@
-:root {
-  --primary-color: #9b948a;
-  --secondary-color: #6a6354;
-  --the-green-color: #809671;
-  --the-vanilla-color: #e5d2b8;
-}
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style-type: none;
-  box-sizing: border-box;
-  font-family: "Oswald", serif;
-  color: #fefce2;
-}
-
 body {
-  background-color: var(--secondary-color);
   display: grid;
   grid-template-areas:
     "header header header header header"
@@ -26,58 +9,6 @@ body {
     "footer footer footer footer footer";
 }
 
-.header {
-  grid-area: header;
-  width: 100%;
-  height: 120px;
-  display: block;
-  background-color: var(--primary-color);
-  text-align: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.logo img {
-  padding: 25px;
-}
-.navbar ul li {
-  display: inline-block;
-  margin: 5px;
-  padding: 2px;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 35px;
-}
-.navbar li:hover {
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-}
-.socialMedia {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-.socialMedia ul li {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  padding-right: 10px;
-}
-.socialMedia ul li:hover {
-  opacity: 0.6;
-}
 .startImage {
   grid-area: startImage;
   background-image: url("../images/portrait-indigenous-person-integrating-society.jpg");
@@ -92,8 +23,9 @@ body {
   left: 15%;
   top: 25%;
   width: 15%;
-  border: #837d75 solid 1px;
-  background-color: #837d756b;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
+  color: var(--the-text-color);
   border-radius: 15px;
   padding: 1rem;
   text-align: center;
@@ -136,71 +68,8 @@ body {
 .members img {
   width: 150px;
   height: 180px;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 .members p {
   width: 60%;
-}
-.footer {
-  grid-area: footer;
-  width: 100%;
-  height: 250px;
-  display: block;
-  background-color: var(--primary-color);
-  text-align: center;
-}
-.box2 img {
-  height: 20px;
-  width: 20px;
-}
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.box1 {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-.box1 p {
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.box2 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box2 li {
-  padding: 0.5rem;
-}
-.box3 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box3 li {
-  padding: 0.3rem;
-}
-.box4 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box4 li {
-  padding: 0.3rem;
-}
-.rowEnd {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.policyTerms {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }

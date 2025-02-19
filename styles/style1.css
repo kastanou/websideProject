@@ -1,25 +1,4 @@
-:root {
-  --primary-color: #837d75;
-  --secondary-color: #776f5e;
-  --the-green-color: #94ac85;
-  --the-vanilla-color: #e5d2b8;
-}
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style-type: none;
-  box-sizing: border-box;
-  font-family: "Oswald", serif;
-  color: #fefce2;
-}
-
-ul {
-  list-style-type: none;
-}
-
 body {
-  background-color: var(--secondary-color);
   display: grid;
   grid-template-areas:
     "header header header header header"
@@ -33,62 +12,9 @@ body {
     "newsletterArea newsletterArea newsletterArea newsletterArea newsletterArea"
     "footer footer footer footer footer";
 }
-
-.header {
-  grid-area: header;
-  width: 100%;
-  height: 120px;
-  display: block;
-  background-color: var(--primary-color);
-  text-align: center;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.navbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-.logo img {
-  padding: 25px;
-}
-.navbar ul li {
-  display: inline-block;
-  margin: 5px;
-  padding: 2px;
-  font-size: 1.1em;
-  font-weight: bold;
-  line-height: 35px;
-}
-.navbar li:hover {
-  background-color: var(--secondary-color);
-  border-radius: 10px;
-}
-.socialMedia {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-.socialMedia ul li {
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  padding-right: 10px;
-}
-.socialMedia ul li:hover {
-  opacity: 0.6;
-}
 .heroImage {
   grid-area: heroImage;
-  background-image: url("../images/sunset-group.jpg");
+  background-image: url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -105,86 +31,102 @@ body {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 100%;
+  width: 50%;
   height: 100%;
-  opacity: 0.6;
-  background: rgb(116, 130, 73);
-  background: linear-gradient(
-    0deg,
-    rgba(116, 130, 73, 0.4431022408963585) 0%,
-    rgba(159, 134, 79, 1) 100%
-  );
+  opacity: 0.5;
+  background: var(--the-white-color);
 }
 .heroText {
   z-index: 2;
-  gap: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   width: 50%;
 }
-.btn {
-  background-color: #c06b32;
-  color: white;
-  padding: 5px 8px;
-  text-decoration: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
-  transition: 0.3s ease;
-  max-width: 8rem;
+.heroText h3 {
+  line-height: 2rem;
+  width: 30%;
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  text-align: left;
+  color: var(--the-text-color);
 }
-.btn:hover {
-  background-color: #eb6341;
+.heroText .btn {
+  position: absolute;
+  left: 20%;
+  bottom: 20%;
 }
 .boxes {
-  padding-left: 1rem;
+  color: var(--the-text-color);
+  background-color: var(--body-color);
+  margin-left: 2rem;
   grid-area: boxes;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  text-align: center;
-  height: 65vh;
-  gap: 5rem;
+}
+.boxColumnFirst {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.boxColumnSecond {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
 }
 .boxDays {
-  border: #333 solid 5px;
-  padding: 0.5rem;
-  margin-top: 1rem;
-  width: 20%;
-  height: 30%;
-  background-color: var(--the-green-color);
+  padding: 1.5rem;
+  width: 150px;
+  height: 150px;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
 }
 .boxActivities {
-  border: #333 solid 5px;
-  padding: 0.5rem;
-  margin-top: 1.5rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
   margin-left: 2rem;
-  width: 20%;
-  height: 30%;
-  background-color: var(--the-green-color);
+  width: 150px;
+  height: 150px;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
 }
 .boxSponsors {
-  border: #333 solid 5px;
-  padding: 0.5rem;
+  padding: 1.5rem;
   margin-left: 5rem;
-  width: 20%;
-  height: 30%;
-  background-color: var(--the-green-color);
+  width: 150px;
+  height: 150px;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
 }
 .boxInstructors {
-  border: #333 solid 5px;
-  padding: 0.5rem;
-  margin-left: 2rem;
-  width: 20%;
-  height: 30%;
-  background-color: var(--the-green-color);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 7rem;
+  width: 150px;
+  height: 150px;
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
 }
 .sidetextTeam {
   grid-area: sidetextTeam;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,7 +138,7 @@ body {
 }
 .imageA {
   grid-area: imageA;
-  background-image: url("../images/40150.jpg");
+  background-image: url("../images/296147.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -205,6 +147,8 @@ body {
 }
 .sidetextSchedule {
   grid-area: sidetextSchedule;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -234,6 +178,8 @@ body {
   width: 100vw;
   height: 75vh;
   text-align: center;
+  background-color: var(--the-secondary-blue-color);
+  color: var(--the-text-color);
 }
 .sponsors img {
   width: 120px;
@@ -242,7 +188,7 @@ body {
 .sponsorsLogos {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.5rem;
+  gap: 4.5rem;
   justify-content: center;
   align-items: center;
 }
@@ -271,11 +217,12 @@ body {
 }
 
 .newsletterArea {
+  background-color: var(--body-color);
+  color: var(--the-text-color);
   grid-area: newsletterArea;
   background-image: url("../images/5493.jpg");
   background-size: cover;
   background-position: center;
-  border: #333 solid 1px;
   width: 100vw;
   height: 55vh;
 }
@@ -292,77 +239,14 @@ body {
   position: relative;
   left: 15%;
   top: 25%;
-  border: #837d75 solid 1px;
-  background-color: #837d75b6;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
   border-radius: 15px;
   padding: 1rem;
 }
 .newsletterBox input[type="email"] {
   width: 50%;
-  padding: 0.2rem;
+  padding: 0.5rem;
   border: 1px solid #333;
   border-radius: 4px;
-}
-.footer {
-  grid-area: footer;
-  width: 100%;
-  height: 250px;
-  display: block;
-  background-color: var(--primary-color);
-  text-align: center;
-}
-.box2 img {
-  height: 20px;
-  width: 20px;
-}
-.columns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.box1 {
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-}
-.box1 p {
-  display: flex;
-  align-content: center;
-  flex-wrap: wrap;
-}
-.box2 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box2 li {
-  padding: 0.5rem;
-}
-.box3 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box3 li {
-  padding: 0.3rem;
-}
-.box4 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.box4 li {
-  padding: 0.3rem;
-}
-.rowEnd {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.policyTerms {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }
