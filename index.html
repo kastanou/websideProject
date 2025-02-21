@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="scripts/scriptCarousel.js" defer></script>
     <link rel="stylesheet" href="styles/basics.css" />
     <link rel="stylesheet" href="styles/style1.css" />
     <style>
@@ -88,17 +89,19 @@
     </div>
 
     <div class="sidetextTeam">
-      <h3>Lorem ipsum dolor sit.</h3>
+      <h3>Lorem ipsum dolor sit!</h3>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam
         quaerat, fugiat provident optio facilis unde repellendus maxime! Aperiam
         blanditiis dolore impedit totam expedita ipsa quod nesciunt quos quam
         qui sapiente eligendi, nobis vitae corrupti ad sequi dolor fugit nam
         magni hic in quidem modi iste eius. Iusto placeat laudantium nesciunt ut
-        dicta saepe. Reprehenderit impedit, earum neque cupiditate magni fuga
-        necessitatibus dolor obcaecati, quod esse mollitia eaque maiores
-        delectus natus qui repellat illo laborum facere? Molestiae inventore
-        labore asperiores numquam.
+        dicta saepe. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Quibusdam voluptates dicta similique porro minus voluptatibus
+        necessitatibus molestias incidunt deserunt reprehenderit. Reprehenderit
+        impedit, earum neque cupiditate magni fuga necessitatibus dolor
+        obcaecati, quod esse mollitia eaque maiores delectus natus qui repellat
+        illo laborum facere? Molestiae inventore labore asperiores numquam.
       </p>
       <a href="the_team.html" class="btn">The Team</a>
     </div>
@@ -110,19 +113,30 @@
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellat
         beatae explicabo nemo amet atque aliquam, sit laborum incidunt, labore
-        reiciendis dolores corrupti nostrum exercitationem. Rem, officiis.
-        Asperiores quis in voluptatum recusandae dolorum fugiat facilis porro,
-        eveniet minima possimus eum inventore, corporis omnis repellendus animi.
+        reiciendis dolores corrupti nostrum exercitationem. Lorem ipsum dolor
+        sit amet consectetur adipisicing elit. Veniam maxime cupiditate quos
+        omnis soluta asperiores ut ipsum mollitia, ad nulla. Lorem ipsum dolor
+        sit amet, consectetur adipisicing elit. Libero sit officiis veniam
+        dolore maiores, quod voluptas ullam eligendi nam, deserunt earum
+        blanditiis, nisi iste neque? Rem, officiis. Asperiores quis in
+        voluptatum recusandae dolorum fugiat facilis porro, eveniet minima
+        possimus eum inventore, corporis omnis repellendus animi.
       </p>
       <a href="schedule.html" class="btn">The Schedule</a>
     </div>
 
     <div class="fourPictures">
-      <img src="images/1-546631877.jpg" alt="" />
-      <img src="images/2-tai-chi1.jpg" alt="" />
-      <img src="images/hiking2.jpg" alt="" />
-      <img src="images/2149392207.jpg" alt="" />
+      <div class="firstTwoPictures">
+        <img src="images/1-546631877.jpg" alt="" />
+        <img src="images/2-tai-chi1.jpg" alt="" />
+      </div>
+      <div class="secondTwoPictures">
+        <img src="images/hiking2.jpg" alt="" />
+        <img src="images/2149392207.jpg" alt="" />
+      </div>
     </div>
+
+    <!--SPONSORS-->
 
     <div class="sponsors">
       <h1>Our Sponsors</h1>
@@ -140,9 +154,59 @@
       </div>
     </div>
 
+    <!--CAROUSEL STARTS HERE-->
     <div class="carousel">
-      <p>carousel</p>
+      <div class="slideContainer">
+        <div class="slides">
+          <img class="image active" src="./images/image1.jpg" />
+          <img class="image" src="./images/image2.jpg" />
+          <img class="image" src="./images/image3.jpg" />
+          <img class="image" src="./images/image4.jpg" />
+          <img class="image" src="./images/image5.jpg" />
+          <img class="image" src="./images/image6.jpg" />
+          <img class="image" src="./images/image7.jpg" />
+          <img class="image" src="./images/image8.jpg" />
+          <img class="image" src="./images/image9.jpg" />
+          <img class="image" src="./images/image10.jpg" />
+        </div>
+        <div class="buttons">
+          <span id="next">&#8658;</span>
+          <span id="prev">&#8656;</span>
+        </div>
+
+        <div class="dotsContainer">
+          <div class="dot active" attr="0" onclick="switchImage(this)"></div>
+          <div class="dot" attr="1" onclick="switchImage(this)"></div>
+          <div class="dot" attr="2" onclick="switchImage(this)"></div>
+          <div class="dot" attr="3" onclick="switchImage(this)"></div>
+          <div class="dot" attr="4" onclick="switchImage(this)"></div>
+          <div class="dot" attr="5" onclick="switchImage(this)"></div>
+          <div class="dot" attr="6" onclick="switchImage(this)"></div>
+          <div class="dot" attr="7" onclick="switchImage(this)"></div>
+          <div class="dot" attr="8" onclick="switchImage(this)"></div>
+          <div class="dot" attr="9" onclick="switchImage(this)"></div>
+        </div>
+      </div>
+      <div class="userControl">
+        <button class="controlButton" id="stopButton" onclick="stopInterval()">
+          Stop
+        </button>
+        <button
+          class="controlButton"
+          id="startButton"
+          onclick="startInterval()"
+        >
+          Start
+        </button>
+
+        <form class="formTimer">
+          <label for="timer">Timer:</label>
+          <input id="timerInput" type="text" />
+          <button id="submitButton">Set Timer</button>
+        </form>
+      </div>
     </div>
+    <!--CAROUSEL ENDS HERE-->
 
     <div class="faq">
       <h2>Frequently Asked Questions</h2>

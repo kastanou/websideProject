@@ -5,7 +5,7 @@ body {
     "heroImage heroImage heroImage heroImage heroImage "
     "boxes boxes sidetextTeam sidetextTeam sidetextTeam"
     "imageA imageA imageA imageA imageA"
-    "sidetextSchedule sidetextSchedule fourPictures fourPictures fourPictures"
+    "sidetextSchedule fourPictures fourPictures fourPictures fourPictures"
     "sponsors sponsors sponsors sponsors sponsors"
     "carousel carousel carousel carousel carousel"
     "faq faq faq faq faq"
@@ -59,7 +59,7 @@ body {
 .boxes {
   color: var(--the-text-color);
   background-color: var(--body-color);
-  margin-left: 2rem;
+  margin-left: 4rem;
   grid-area: boxes;
   display: flex;
   flex-direction: row;
@@ -129,12 +129,15 @@ body {
   color: var(--the-text-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   gap: 1.5rem;
-  padding: 1rem;
-  text-align: center;
-  padding: 5rem;
-  height: 65vh;
+  padding: 2rem;
+  margin-left: 5rem;
+  height: 80vh;
+  width: 70%;
+}
+.sidetextTeam .btn {
+  align-self: center;
 }
 .imageA {
   grid-area: imageA;
@@ -151,23 +154,29 @@ body {
   color: var(--the-text-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 5rem;
-  height: 45vh;
+  justify-content: left;
+  gap: 2rem;
+  padding-left: 5rem;
+  padding-top: 3rem;
+  width: 100%;
+  height: 90vh;
 }
 .fourPictures {
   grid-area: fourPictures;
+}
+.firstTwoPictures,
+.secondTwoPictures {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  height: 40%;
   gap: 2rem;
-  padding: 5rem;
+  margin: 2rem;
+  justify-content: center;
 }
-.fourPictures img {
-  width: 40%;
-  height: 45%;
+.firstTwoPictures img,
+.secondTwoPictures img {
+  width: 350px;
 }
-
 .sponsors {
   grid-area: sponsors;
   display: flex;
@@ -194,15 +203,197 @@ body {
 }
 .carousel {
   grid-area: carousel;
-  background-image: url("images/no-carousel.png");
-  background-repeat: no-repeat;
-  border: #333 solid 1px;
-  width: 100vw;
-  height: 55vh;
-  background-position: center;
-  text-align: left;
-  font-size: 2rem;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-color);
 }
+.slideContainer {
+  position: relative;
+  width: 800px;
+  height: 350px;
+  border: 3px solid var(--the-transparent-color);
+  box-shadow: 0 0 8px 2px rgb(0, 0, 0, 0.2);
+}
+.slideContainer .slides {
+  width: 100%;
+  height: calc(100% - 40px);
+  position: relative;
+  overflow: hidden;
+}
+.slideContainer .slides > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.slideContainer .slides > img:not(.active) {
+  top: 0;
+  left: -100%;
+}
+#next,
+#prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: #eee;
+  font-size: 34px;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+#next {
+  right: 20px;
+}
+#prev {
+  left: 20px;
+}
+#next:hover,
+#prev:hover {
+  background-color: #ede6d6;
+  opacity: 0.8;
+  color: #222;
+}
+.dotsContainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dotsContainer .dot {
+  width: 15px;
+  height: 15px;
+  margin: 0px 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dotsContainer .active {
+  background-color: #555;
+}
+.userControl {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-left: 2rem;
+}
+.controlButton {
+  width: 100px;
+  height: 50px;
+  background-color: #ebecf0;
+  color: #555;
+  border: #555 2px solid;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.controlButton:hover {
+  background-color: black;
+  color: #ebecf0;
+}
+.formTimer {
+  background-color: #ebecf0;
+  padding: 20px;
+  border: #555 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+}
+#submitButton {
+  border: none;
+  width: 70px;
+  height: 40px;
+  background-color: white;
+  color: #555;
+  border: #555 2px solid;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+#submitButton:hover {
+  background-color: black;
+  color: #ebecf0;
+}
+label {
+  font-size: 24px;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #555;
+  outline: none;
+}
+
+@keyframes next1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes next2 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes prev1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes prev2 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.slideNext1 {
+  animation: next1 0.5s ease-in forwards;
+}
+.slideNext2 {
+  animation: next2 0.5s ease-in forwards;
+}
+.slidePrev1 {
+  animation: prev1 0.5s ease-in forwards;
+}
+.slidePrev2 {
+  animation: prev2 0.5s ease-in forwards;
+}
+
 .faq {
   grid-area: faq;
   border: #333 solid 1px;
