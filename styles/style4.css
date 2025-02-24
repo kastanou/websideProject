@@ -45,20 +45,19 @@ body {
   gap: 5rem;
   justify-content: space-evenly;
 }
-.member1,
-.member2,
-.member3,
-.member4,
-.member5,
-.member6 {
+.member {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: 33%;
   height: 60%;
-  margin: 7rem;
+  margin: 6rem;
+}
+.member h3,
+.member h4 {
+  padding: 0.5rem;
 }
 .members p {
+  width: 250px;
   overflow-y: scroll;
 }
 .members img {

@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/basics.css">
     <link rel="stylesheet" href="styles/style5.css">
+    <script src="scripts/scriptContactForm.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
         </style>
@@ -69,27 +70,67 @@
     </ul>
 </div>
 
-<div class="contactForm">
-    <h2>Contact Form</h2>
-    <form id="contactForm" action="index.html" autocomplete="off">
-
+    <div class="contactForm">
+      <h2>Contact Form</h2>
+      <form name="myForm" action="index.html" autocomplete="off">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your first name">
-    
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your first name"
+        />
+        <div class="error hidden" id="firstNameError">
+          Please enter a valid first name.
+        </div>
+
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name">
-    
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name"
+        />
+        <div class="error hidden" id="lastNameError">
+          Please enter a valid last name.
+        </div>
+
         <label for="mail">E-mail</label>
-        <input type="text" id="mail" name="mail" placeholder="Your e-mail">
+        <input type="text" id="mail" name="mail" placeholder="Your e-mail" />
+        <div class="error hidden" id="emailError">Invalid email format.</div>
 
         <label for="confirmMail">Confirm your E-mail</label>
-        <input type="text" id="confirmMail" name="confirmMail" placeholder="Confirm your e-mail">
+        <input
+          type="text"
+          id="confirmMail"
+          name="confirmMail"
+          placeholder="Confirm your e-mail"
+        />
+        <div class="error hidden" id="confirmEmailError">
+          Emails do not match.
+        </div>
 
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Your phone number"
+        />
+        <div class="error hidden" id="phoneError">
+          Enter a valid phone number (14 digits).
+        </div>
 
         <label for="address">Address</label>
-        <input type="text" id="address" name="address" placeholder="Your address">
+        <input
+          type="text"
+          id="address"
+          name="address"
+          placeholder="Your address"
+        />
+        <div class="error hidden" id="addressError">
+          Address cannot be empty.
+        </div>
 
         <label for="country">Country</label>
         <select id="country" name="country">
@@ -98,14 +139,24 @@
           <option value="usa">USA</option>
           <option value="europe">Europe</option>
         </select>
-    
+
         <label for="input">Input</label>
-        <textarea id="input" name="input" placeholder="Write something.." style="height:200px"></textarea>
-    
-        <input type="submit" value="Submit">
-    
+        <textarea
+          id="input"
+          name="input"
+          placeholder="Write something.."
+          style="height: 200px"
+        ></textarea>
+        <div class="error hidden" id="textareaErrorShort">
+          Your text is too short.
+        </div>
+        <div class="error hidden" id="textareaErrorLong">
+          Your text is too long.
+        </div>
+
+        <input type="submit" value="Send" />
       </form>
-</div>
+    </div>
 
 
 <div class="map">

@@ -34,7 +34,7 @@ body {
   flex-direction: column;
   flex-wrap: wrap;
   gap: 1rem;
-  width: 60%;
+  width: 30vw;
   height: 130vh;
   padding-left: 6rem;
   padding-top: 4rem;
@@ -47,14 +47,14 @@ body {
   width: 20px;
 }
 .contactForm {
-  grid-area: contactForm;
+  font-family: "Oswald", serif;
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50vw;
   height: 130vh;
-  padding-right: 1rem;
+  padding-left: 15rem;
   padding-top: 4rem;
-  gap: 1rem;
+  gap: 2rem;
 }
 .form-container {
   color: black;
@@ -95,6 +95,19 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #eb6341;
+}
+.hidden {
+  display: none;
+}
+
+.error {
+  font-weight: bold;
+  border-color: #c92432;
+  border-radius: 16px;
+  color: #c92432;
+  background-color: #fffafa;
+  padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .map {
