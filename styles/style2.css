@@ -226,3 +226,218 @@ iframe {
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
+
+/* Responsive design*/
+@media (max-width: 1024px) {
+  body {
+    grid-template-areas:
+      "header"
+      "startImage"
+      "textA"
+      "textB"
+      "pictureA"
+      "information"
+      "boxes"
+      "imagesCartoon"
+      "textContactUs"
+      "video"
+      "textSideVideo"
+      "footer";
+  }
+
+  .startImage h1 {
+    left: 10%;
+    width: 25%;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .textA,
+  .textB {
+    width: 90%;
+    padding: 2rem;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  .pictureA {
+    padding: 4rem;
+  }
+
+  .pictureA img {
+    width: 250px;
+    height: 380px;
+  }
+
+  .information {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .who,
+  .goals,
+  .values,
+  .join {
+    width: 80%;
+  }
+
+  .boxes {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .boxDays,
+  .boxActivities,
+  .boxSponsors,
+  .boxInstructors {
+    width: 140px;
+    height: 140px;
+    margin: 0.5rem;
+  }
+
+  .imagesCartoon {
+    height: auto;
+    justify-content: space-around;
+    margin: 5rem 0;
+  }
+
+  .textContactUs {
+    height: auto;
+    padding: 3rem 1rem;
+    margin: 5rem 0;
+    text-align: left;
+  }
+  .textContactUs .btn {
+    align-self: center;
+  }
+  .pictureB {
+    display: none;
+  }
+  .video {
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .textSideVideo {
+    height: auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "startImage"
+      "textA"
+      "textB"
+      "pictureA"
+      "information"
+      "boxes"
+      "imagesCartoon"
+      "textContactUs"
+      "pictureB"
+      "video"
+      "textSideVideo"
+      "footer";
+  }
+
+  .startImage {
+    height: 25vh;
+  }
+
+  .startImage h1 {
+    left: 5%;
+    width: 50%;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+
+  .textA,
+  .textB {
+    width: 95%;
+    padding: 1.5rem;
+    text-align: left;
+  }
+
+  .pictureA {
+    padding: 2rem;
+  }
+
+  .pictureA img {
+    width: 220px;
+    height: 320px;
+  }
+
+  .information {
+    flex-direction: column;
+    height: auto;
+    padding: 3rem 1rem;
+    text-align: center;
+  }
+
+  .who,
+  .goals,
+  .values,
+  .join {
+    width: 100%;
+  }
+
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .boxDays,
+  .boxActivities,
+  .boxSponsors,
+  .boxInstructors {
+    width: 120px;
+    height: 120px;
+    margin: 0.5rem;
+  }
+
+  .imagesCartoon {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+    margin: 10rem 0;
+  }
+
+  .textContactUs {
+    height: auto;
+    padding: 3rem 1rem;
+    margin: 5rem 0;
+    text-align: left;
+  }
+  .pictureB {
+    display: none;
+  }
+  .video {
+    height: auto;
+    padding: 3rem 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 200px;
+  }
+
+  .textSideVideo {
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+}

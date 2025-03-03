@@ -10,7 +10,7 @@ body {
 
 .startImage {
   grid-area: startImage;
-  background-image: url("../images/agata-create-kGXST_-n36w-unsplash.jpg");
+  background-image: url("../images/contactpage.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -48,13 +48,15 @@ body {
 }
 .contactForm {
   font-family: "Oswald", serif;
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  height: 130vh;
-  padding-left: 15rem;
-  padding-top: 4rem;
-  gap: 2rem;
+  grid-area: contactForm;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: left;
+}
+.contactForm label {
+  align-self: left;
 }
 .form-container {
   color: black;
@@ -126,4 +128,92 @@ input[type="submit"]:hover {
 
 iframe {
   width: 100%;
+}
+
+/* Responsive design*/
+@media (max-width: 1024px) {
+  .contactDetails,
+  .contactForm {
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .contactDetails li {
+    justify-content: center;
+  }
+
+  .contactForm input,
+  .contactForm select,
+  .contactForm textarea {
+    width: 100%;
+  }
+
+  .map {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "startImage"
+      "contactDetails"
+      "contactForm"
+      "map"
+      "footer";
+  }
+
+  .startImage {
+    height: 25vh;
+  }
+
+  .startImage h1 {
+    left: 5%;
+    width: 50%;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+
+  .contactDetails {
+    padding: 1.5rem;
+    text-align: left;
+    width: 100%;
+    height: auto;
+  }
+  .contactForm {
+    padding: 1.5rem;
+  }
+
+  .contactDetails h2,
+  .contactForm h2 {
+    font-size: 20px;
+  }
+
+  .contactDetails li {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .contactDetails img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .contactForm input,
+  .contactForm select,
+  .contactForm textarea {
+    width: 100%;
+  }
+  .contactForm label {
+    align-self: left;
+  }
+  .map {
+    padding: 1.5rem;
+  }
+
+  iframe {
+    height: 300px;
+  }
 }

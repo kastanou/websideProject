@@ -3,6 +3,14 @@ const contactForm = document.forms["myForm"];
 contactForm.addEventListener("submit", function (submitEvent) {
   submitEvent.preventDefault();
 
+  firstName.blur();
+  lastName.blur();
+  email.blur();
+  confirmEmail.blur();
+  phone.blur();
+  address.blur();
+  textareaMessage.blur();
+
   const isFirstNameValid = validateFirstName();
   const isLastNameValid = validateLastName();
   const isEmailValid = validateEmail();
@@ -10,7 +18,6 @@ contactForm.addEventListener("submit", function (submitEvent) {
   const isAddressValid = validateAddress();
   const isMessageValid = validateMessage();
 
-  // Check if all validations passed
   if (
     isFirstNameValid &&
     isLastNameValid &&
@@ -24,7 +31,6 @@ contactForm.addEventListener("submit", function (submitEvent) {
     console.log("Form validation failed. Please correct the errors.");
   }
 });
-
 let isValid = true;
 
 const firstName = document.getElementById("fname");
@@ -52,7 +58,7 @@ const nameRegex = /^[A-Za-z]{1,20}$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$/;
 
 //regular expression for validation of phone numbers that must be exactly 14 digits long.
-const phoneRegex = /^\d{14}$/;
+const phoneRegex = /^\+30[-\s]?\d{10}$/;
 
 //regular expression for validation of an address.
 const addressRegex = /^[A-Za-z0-9\s,.-/#]{5,20}$/;

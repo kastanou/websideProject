@@ -11,7 +11,7 @@ body {
 
 .startImage {
   grid-area: startImage;
-  background-image: url("../images/portrait-indigenous-person-integrating-society.jpg");
+  background-image: url("../images/25810922_7130967-fotor-20250225221936.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -60,7 +60,7 @@ body {
   width: 250px;
   overflow-y: scroll;
 }
-.members img {
+.member img {
   width: 150px;
   height: 180px;
   border-radius: 40%;

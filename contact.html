@@ -81,7 +81,7 @@
           placeholder="Your first name"
         />
         <div class="error hidden" id="firstNameError">
-          Please enter a valid first name.
+          Please enter a valid first name with only letters and a length between 1 and 20 characters.
         </div>
 
         <label for="lname">Last Name</label>
@@ -92,12 +92,12 @@
           placeholder="Your last name"
         />
         <div class="error hidden" id="lastNameError">
-          Please enter a valid last name.
+          Please enter a valid last name with only letters and a length between 1 and 20 characters.
         </div>
 
         <label for="mail">E-mail</label>
         <input type="text" id="mail" name="mail" placeholder="Your e-mail" />
-        <div class="error hidden" id="emailError">Invalid email format.</div>
+        <div class="error hidden" id="emailError">Invalid email format. Your email should have this form: example@example.com </div>
 
         <label for="confirmMail">Confirm your E-mail</label>
         <input
@@ -118,7 +118,7 @@
           placeholder="Your phone number"
         />
         <div class="error hidden" id="phoneError">
-          Enter a valid phone number (14 digits).
+          Enter a valid phone number that starts with +30 (for Greece) and are followed by exactly 10 digits (e.g. +301234567890, or +30-1234567890, or +30 1234567890).
         </div>
 
         <label for="address">Address</label>
