@@ -26,7 +26,18 @@ contactForm.addEventListener("submit", function (submitEvent) {
     isAddressValid &&
     isMessageValid
   ) {
+    const userData = {
+      firstName: firstName.value.trim(),
+      lastName: lastName.value.trim(),
+      email: email.value.trim(),
+      phone: phone.value.trim(),
+      address: address.value.trim(),
+      country: countrySelect.options[countrySelect.selectedIndex].text,
+      message: textareaMessage.value.trim(),
+    };
+
     console.log("Form submitted successfully!");
+    console.log("User Input Data:", userData);
   } else {
     console.log("Form validation failed. Please correct the errors.");
   }
@@ -71,7 +82,6 @@ function validateFirstName() {
     firstNameError.classList.remove("hidden");
     return false;
   } else {
-    console.log(firstNameInput);
     return true;
   }
 }
@@ -84,7 +94,6 @@ function validateLastName() {
     lastNameError.classList.remove("hidden");
     return false;
   } else {
-    console.log(lastNameInput);
     return true;
   }
 }
@@ -103,7 +112,6 @@ function validateEmail() {
     confirmEmailError.classList.remove("hidden");
     return false;
   } else {
-    console.log(emailInput);
     return true;
   }
 }
@@ -116,7 +124,6 @@ function validatePhone() {
     phoneError.classList.remove("hidden");
     return false;
   } else {
-    console.log(phoneInput);
     return true;
   }
 }
@@ -129,7 +136,6 @@ function validateAddress() {
     addressError.classList.remove("hidden");
     return false;
   } else {
-    console.log(addressInput);
     return true;
   }
 }
@@ -146,7 +152,6 @@ function validateMessage() {
     textareaErrorLong.classList.remove("hidden");
     return false;
   } else {
-    console.log(messageInput);
     return true;
   }
 }
@@ -179,12 +184,6 @@ phone.addEventListener("focus", () => {
 address.addEventListener("blur", validateAddress);
 address.addEventListener("focus", () => {
   addressError.classList.add("hidden");
-});
-
-countrySelect.addEventListener("change", function () {
-  const selectedOption = countrySelect.options[countrySelect.selectedIndex];
-
-  console.log(selectedOption.text);
 });
 
 textareaMessage.addEventListener("blur", validateMessage);
