@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="styles/basics.css">
     <link rel="stylesheet" href="styles/style4.css">
+    <script src="scripts/scriptFilter.js" defer></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
         </style>
@@ -47,53 +48,60 @@
     <h1>The Team</h1>
     </div>
 
+    <div class="filterButtons">
+    <button onclick="filterMembers('all')">Show All</button>
+    <button onclick="filterMembers('yoga')">Yoga</button>
+    <button onclick="filterMembers('pilates')">Pilates</button>
+    <button onclick="filterMembers('taichi')">Tai Chi</button>
+</div>
+
     <div class="members">
-        <div class="row1Instructors">
-        <div class="member">
+       
+        <div class="member"  data-category="yoga">
             <img src="images/teacher1.jpg" alt="">
             <h3>Olivia Parker</h3>
             <h4>Our yoga instructor</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore debitis qui illo adipisci, architecto expedita id cum repellendus praesentium exercitationem! Veniam minus numquam, error nulla aperiam nisi, consectetur quo nemo doloremque cum similique accusamus illum porro fugit accusantium minima, atque tempore aliquid quaerat adipisci corrupti totam aut? Delectus vero fugiat obcaecati eius hic dolor, sequi quos voluptatibus ratione soluta. Vel, temporibus aut velit voluptates laborum sit molestias reprehenderit? Deleniti nihil eos delectus quis, repellat accusamus nisi eligendi hic maiores fugiat sint maxime ad obcaecati, harum inventore sed? Doloremque veniam officia iste cum.</p>
             
         </div>
-        <div class="member">
+        <div class="member" data-category="pilates">
             <img src="images/teacher2.jpg" alt="">
             <h3>Sophia Mitchell</h3>
             <h4>Our pilates instructor</h4>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet commodi aliquam similique quos alias fuga voluptate earum laborum dolore expedita! Dignissimos eaque omnis dolore impedit. Esse earum rem et veniam odit debitis iusto corrupti est tenetur tempora dolores unde sapiente ratione nam perferendis, id expedita, magnam beatae! Nisi velit architecto in dicta labore enim reiciendis dolorum quia repellat est eligendi omnis minus consectetur ipsam voluptas ab perferendis, eveniet inventore optio aspernatur mollitia repudiandae nesciunt. Nihil voluptatum doloremque recusandae sequi voluptatibus nisi? Accusamus animi, blanditiis quibusdam, quia, minima saepe dolorem accusantium fugit amet ea doloremque? Illum, natus? Ullam nemo quam libero possimus vitae.</p>
             
         </div>
-        <div class="member">
+        <div class="member" data-category="taichi">
             <img src="images/teacher3.jpg" alt="">
             <h3>Ethan Harrison</h3>
             <h4>Our tai-chi teacher</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas explicabo tenetur hic voluptatem iure illum dolorum repudiandae, repellendus praesentium quos. Veniam adipisci excepturi doloremque quam eum aperiam dignissimos molestias assumenda ipsam dolorum corporis doloribus asperiores labore, incidunt beatae iste numquam tempore quod esse cumque porro autem sed. Necessitatibus aliquam illum, facilis porro modi eaque animi nihil saepe exercitationem, beatae odio pariatur eum minima ipsam vitae unde non placeat, totam fugiat? Non doloremque aliquam molestiae porro hic nisi perspiciatis, ipsa laborum veniam aperiam blanditiis! Aut odit nesciunt minus id voluptatum blanditiis dolorem repudiandae.</p>
             
         </div>
-        </div>
-        <div class="row2Instructors">
-              <div class="member">
+        
+        
+              <div class="member" data-category="yoga">
             <img src="images/teacher4.jpg" alt="">
             <h3>Emily Carter</h3>
             <h4>Our yoga instructor</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque voluptatibus officiis perspiciatis fugit quae reiciendis porro adipisci, obcaecati illum esse. Veniam minus numquam, error nulla aperiam nisi, consectetur quo nemo doloremque cum similique accusamus illum porro fugit accusantium minima, atque tempore aliquid quaerat adipisci corrupti totam aut? Delectus vero fugiat obcaecati eius hic dolor, sequi quos voluptatibus ratione soluta. Vel, temporibus aut velit voluptates laborum sit molestias reprehenderit? Deleniti nihil eos delectus quis, repellat accusamus nisi eligendi hic maiores fugiat sint maxime ad obcaecati, harum inventore sed? Doloremque veniam officia iste cum.</p>
             
         </div>
-        <div class="member">
+        <div class="member" data-category="pilates">
             <img src="images/teacher5.png" alt="">
             <h3>Emma Bennett</h3>
             <h4>Our pilates instructor</h4>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro maxime magni aut, eaque culpa at sint nihil quos animi eius! Dignissimos eaque omnis dolore impedit. Esse earum rem et veniam odit debitis iusto corrupti est tenetur tempora dolores unde sapiente ratione nam perferendis, id expedita, magnam beatae! Nisi velit architecto in dicta labore enim reiciendis dolorum quia repellat est eligendi omnis minus consectetur ipsam voluptas ab perferendis, eveniet inventore optio aspernatur mollitia repudiandae nesciunt. Nihil voluptatum doloremque recusandae sequi voluptatibus nisi? Accusamus animi, blanditiis quibusdam, quia, minima saepe dolorem accusantium fugit amet ea doloremque? Illum, natus? Ullam nemo quam libero possimus vitae.</p>
             
         </div>
-        <div class="member">
+        <div class="member" data-category="taichi">
             <img src="images/teacher6.png" alt="">
             <h3>James Walker</h3>
             <h4>Our tai-chi teacher</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem impedit ea dolorem modi veniam reiciendis perspiciatis quae! Accusantium, unde eveniet. Veniam adipisci excepturi doloremque quam eum aperiam dignissimos molestias assumenda ipsam dolorum corporis doloribus asperiores labore, incidunt beatae iste numquam tempore quod esse cumque porro autem sed. Necessitatibus aliquam illum, facilis porro modi eaque animi nihil saepe exercitationem, beatae odio pariatur eum minima ipsam vitae unde non placeat, totam fugiat? Non doloremque aliquam molestiae porro hic nisi perspiciatis, ipsa laborum veniam aperiam blanditiis! Aut odit nesciunt minus id voluptatum blanditiis dolorem repudiandae.</p>
             
         </div>
-        </div>
+        
     </div>
  
  

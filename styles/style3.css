@@ -3,8 +3,8 @@ body {
   grid-template-areas:
     "header header header header header"
     "startImage startImage startImage startImage startImage"
-    "retreat-schedule retreat-schedule retreat-schedule retreat-schedule retreat-schedule"
-    "schedule-day schedule-day schedule-day schedule-day schedule-day"
+    "retreatSchedule retreatSchedule retreatSchedule retreatSchedule retreatSchedule"
+    "scheduleDay scheduleDay scheduleDay scheduleDay scheduleDay"
     "newsletterArea newsletterArea newsletterArea newsletterArea newsletterArea"
     "footer footer footer footer footer";
 }
@@ -30,8 +30,8 @@ body {
   padding: 1rem;
   text-align: center;
 }
-.retreat-schedule {
-  grid-area: retreat-schedule;
+.retreatSchedule {
+  grid-area: retreatSchedule;
   width: 100vw;
   padding: 5rem;
   color: var(--the-text-color);
@@ -41,12 +41,12 @@ body {
   gap: 1.5rem;
 }
 
-.retreat-schedule h1 {
+.retreatSchedule h1 {
   text-align: center;
   font-size: 30px;
   color: var(--button-color);
 }
-.retreat-schedule p {
+.retreatSchedule p {
   text-align: center;
   color: var(--the-text-color);
   font-size: 18px;
@@ -66,25 +66,25 @@ body {
   margin-bottom: 6rem;
 }
 
-.schedule-day {
-  grid-area: schedule-day;
+.scheduleDay {
+  grid-area: scheduleDay;
   display: flex;
   flex-direction: row;
   gap: 5rem;
   margin-left: 4rem;
 }
 
-.schedule-day h2 {
+.scheduleDay h2 {
   border-bottom: 2px solid var(--primary-color);
   padding: 1rem;
 }
 
-.schedule-day ul {
+.scheduleDay ul {
   list-style-type: none;
   padding: 1rem;
 }
 
-.schedule-day ul li {
+.scheduleDay ul li {
   color: var(--the-text-color);
   text-align: left;
   font-size: large;
@@ -135,15 +135,15 @@ body {
     padding: 0.8rem;
   }
 
-  .retreat-schedule {
+  .retreatSchedule {
     padding: 1rem;
   }
 
-  .schedule-day {
+  .scheduleDay {
     flex-direction: column;
   }
 
-  .schedule-day .date {
+  .scheduleDay .date {
     align-self: center;
   }
   .event {
@@ -178,8 +178,8 @@ body {
     grid-template-areas:
       "header"
       "startImage"
-      "retreat-schedule"
-      "schedule-day"
+      "retreatSchedule"
+      "scheduleDay"
       "newsletterArea"
       "footer";
   }
@@ -191,15 +191,15 @@ body {
     padding: 0.6rem;
   }
 
-  .retreat-schedule {
+  .retreatSchedule {
     padding: 2rem;
   }
-  .retreat-schedule h1,
-  .retreat-schedule p {
+  .retreatSchedule h1,
+  .retreatSchedule p {
     font-size: 1.1rem;
   }
 
-  .schedule-day {
+  .scheduleDay {
     flex-direction: column;
     gap: 0;
     margin-left: 0;
