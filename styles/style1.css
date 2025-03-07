@@ -8,7 +8,7 @@ body {
     "sidetextSchedule fourPictures fourPictures fourPictures fourPictures"
     "sponsors sponsors sponsors sponsors sponsors"
     "carousel carousel carousel carousel carousel"
-    "accordion accordion accordion accordion accordion"
+    "accordion accordion accordion yogaSvg yogaSvg"
     "newsletterArea newsletterArea newsletterArea newsletterArea newsletterArea"
     "footer footer footer footer footer";
 }
@@ -43,7 +43,7 @@ body {
   width: 50%;
 }
 .heroText h3 {
-  line-height: 2rem;
+  line-height: 1.8rem;
   width: 30%;
   position: absolute;
   left: 5%;
@@ -53,8 +53,8 @@ body {
 }
 .heroText .btn {
   position: absolute;
-  left: 20%;
-  bottom: 20%;
+  left: 15%;
+  bottom: 15%;
 }
 .boxes {
   color: var(--the-text-color);
@@ -129,14 +129,15 @@ body {
   color: var(--the-text-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.5rem;
   padding: 5rem;
   height: 80vh;
 }
-.sidetextTeam .btn {
-  align-self: center;
+.sidetextTeam p {
+  line-height: 1.8rem;
 }
+
 .imageA {
   grid-area: imageA;
   background-image: url("../images/takeshi-yu-2gGPUM_z1XA-unsplash.jpg");
@@ -159,6 +160,9 @@ body {
   width: 40vw;
   height: 90vh;
 }
+.sidetextSchedule p {
+  line-height: 1.8rem;
+}
 .fourPictures {
   grid-area: fourPictures;
 }
@@ -173,7 +177,9 @@ body {
 }
 .firstTwoPictures img,
 .secondTwoPictures img {
-  width: 350px;
+  width: 21rem;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
 }
 .sponsors {
   grid-area: sponsors;
@@ -189,8 +195,8 @@ body {
   color: var(--the-text-color);
 }
 .sponsors img {
-  width: 120px;
-  height: 150px;
+  width: 7.5rem;
+  height: 9.375rem;
 }
 .sponsorsLogos {
   display: flex;
@@ -202,18 +208,27 @@ body {
 .carousel {
   grid-area: carousel;
   width: 100vw;
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--body-color);
 }
+.textBeforeCarousel {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 2rem;
+  margin-right: 4rem;
+  line-height: 1.8rem;
+}
 .slideContainer {
   position: relative;
-  width: 800px;
-  height: 350px;
+  width: 50rem;
+  height: 22rem;
   border: 3px solid var(--the-transparent-color);
   box-shadow: 0 0 8px 2px rgb(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
 .slideContainer .slides {
   width: 100%;
@@ -226,11 +241,17 @@ body {
   height: 100%;
   position: absolute;
   object-fit: cover;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out;
 }
 .slideContainer .slides > img:not(.active) {
   top: 0;
   left: -100%;
 }
+.slideContainer .slides > img.active {
+  transform: scale(1.05);
+}
+
 #next,
 #prev {
   position: absolute;
@@ -238,7 +259,7 @@ body {
   transform: translateY(-50%);
   padding: 14px;
   color: #eee;
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: bold;
   transition: 0.5s;
   border-radius: 3px;
@@ -247,10 +268,10 @@ body {
   z-index: 1;
 }
 #next {
-  right: 20px;
+  right: 1.25rem;
 }
 #prev {
-  left: 20px;
+  left: 1.25rem;
 }
 #next:hover,
 #prev:hover {
@@ -272,23 +293,26 @@ body {
   border: 3px solid #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  transition: all 0.6s ease;
 }
 .dotsContainer .active {
   background-color: #555;
+  transform: scale(1.2);
 }
 .userControl {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
   margin-left: 2rem;
 }
 .controlButton {
-  width: 100px;
-  height: 50px;
+  width: 6.25rem;
+  height: 3.125rem;
+  font-size: 1rem;
+  font-weight: bold;
   background-color: #ebecf0;
-  color: #555;
-  border: #555 2px solid;
+  color: var(--the-text-color);
+  border: var(--the-text-color) 2px solid;
   border-radius: 10px;
   transition: 0.3s ease;
   cursor: pointer;
@@ -300,19 +324,20 @@ body {
 .formTimer {
   background-color: #ebecf0;
   padding: 20px;
-  border: #555 1px solid;
+  color: var(--the-text-color);
+  border: var(--the-text-color) 1px solid;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  width: 16rem;
   text-align: center;
 }
 #submitButton {
   border: none;
-  width: 70px;
-  height: 40px;
+  width: 4.375rem;
+  height: 2.5rem;
   background-color: white;
-  color: #555;
-  border: #555 2px solid;
+  color: var(--the-text-color);
+  border: var(--the-text-color) 2px solid;
   border-radius: 10px;
   transition: 0.3s ease;
   cursor: pointer;
@@ -322,7 +347,7 @@ body {
   color: #ebecf0;
 }
 label {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #333;
   display: block;
   margin-bottom: 8px;
@@ -331,7 +356,7 @@ label {
 input[type="text"] {
   width: 100%;
   padding: 12px;
-  font-size: 16px;
+  font-size: 1rem;
   color: #333;
   border: 2px solid #ddd;
   border-radius: 6px;
@@ -394,7 +419,7 @@ input[type="text"]:focus {
 
 .accordion {
   grid-area: accordion;
-  width: 100vw;
+  width: 60vw;
   height: 160vh;
   background-color: var(--the-white-color);
   border-radius: 8px;
@@ -411,7 +436,7 @@ input[type="text"]:focus {
 }
 
 .faq {
-  width: 800px;
+  width: 50rem;
   border-bottom: 5px solid var(--the-white-color);
 }
 
@@ -425,7 +450,7 @@ input[type="text"]:focus {
   background-color: var(--the-secondary-blue-color);
   border: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
@@ -451,6 +476,26 @@ input[type="text"]:focus {
 
 .accordionButton.active + .answer {
   display: block;
+}
+
+.yogaSvg {
+  grid-area: yogaSvg;
+  width: 40vw;
+  height: 160vh;
+  background-color: var(--the-white-color);
+  padding-top: 12rem;
+}
+#OBJECTS {
+  animation: glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  }
+  100% {
+    filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.8));
+  }
 }
 
 .newsletterArea {
@@ -554,7 +599,7 @@ input[type="text"]:focus {
     flex-direction: row;
     justify-content: center;
     gap: 1rem;
-    margin-top: 5px;
+    margin-top: 0.3rem;
   }
 
   .boxActivities,
@@ -579,22 +624,22 @@ input[type="text"]:focus {
   .boxColumnSecond {
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 0.625rem;
   }
 
   .boxActivities,
   .boxInstructors,
   .boxSponsors {
     margin-left: 0;
-    margin-top: 5px;
+    margin-top: 0.3rem;
   }
 
   .boxDays,
   .boxActivities,
   .boxSponsors,
   .boxInstructors {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
   }
 }
 
@@ -630,19 +675,19 @@ input[type="text"]:focus {
 
   .sidetextTeam h3,
   .sidetextSchedule h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
   }
 
   .sidetextTeam p,
   .sidetextSchedule p {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.2rem;
   }
 
   .sidetextTeam .btn,
   .sidetextSchedule .btn {
     align-self: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 0.8rem 1.5rem;
   }
 }
@@ -651,7 +696,7 @@ input[type="text"]:focus {
 @media (max-width: 1024px) {
   .firstTwoPictures img,
   .secondTwoPictures img {
-    width: 200px;
+    width: 12.5rem;
     height: fit-content;
   }
 }
@@ -672,7 +717,7 @@ input[type="text"]:focus {
   .firstTwoPictures img,
   .secondTwoPictures img {
     width: 90%;
-    max-width: 300px;
+    max-width: 18.75rem;
   }
 }
 
@@ -684,16 +729,30 @@ input[type="text"]:focus {
   }
 
   .sponsors img {
-    width: 100px;
-    height: 120px;
+    width: 6.25rem;
+    height: 7.5rem;
   }
 
   .sponsorsLogos {
     gap: 3rem;
   }
   .carousel {
-    height: fit-content;
-    margin: 5rem 0;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .textBeforeCarousel {
+    width: 80%;
+  }
+  .slideContainer {
+    width: 80%;
+  }
+  .dotsContainer .dot {
+    margin: 0px 18px;
+  }
+  .userControl button,
+  .userControl form {
+    width: 50%;
+    height: 50%;
   }
 }
 
@@ -708,27 +767,38 @@ input[type="text"]:focus {
   }
 
   .sponsors img {
-    width: 80px;
-    height: 100px;
+    width: 5rem;
+    height: 6.25rem;
   }
 
   .sponsorsLogos {
     gap: 2rem;
   }
   .carousel {
-    display: none;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .textBeforeCarousel {
+    width: 80%;
+  }
+  .slideContainer {
+    width: 100%;
+  }
+  .dotsContainer .dot {
+    margin: 0px 8px;
   }
 }
 
 /* Responsive faqs */
 @media (max-width: 1024px) {
   .accordion {
+    width: 100%;
     padding: 3rem;
     height: auto;
   }
 
   .accordion h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     text-align: center;
   }
 
@@ -739,18 +809,19 @@ input[type="text"]:focus {
   }
 
   .faq {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
 
   .accordionButton {
-    font-size: 16px;
-    padding: 12px;
+    font-size: 1rem;
+    padding: 0.75rem;
   }
 
   .answer {
-    font-size: 14px;
-    padding: 12px;
+    width: 100%;
+    font-size: 0.875rem;
+    padding: 0.75rem;
   }
 }
 
@@ -761,14 +832,14 @@ input[type="text"]:focus {
   }
 
   .accordion h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
   }
 
   .accordion h4 {
     width: 100%;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 1rem;
   }
 
@@ -777,18 +848,21 @@ input[type="text"]:focus {
     margin: 0 auto;
   }
 
+  .yogaSvg {
+    height: 100%;
+  }
   .accordionButton {
-    font-size: 14px;
-    padding: 10px;
+    font-size: 0.875rem;
+    padding: 0.625rem;
   }
 
   .accordionButton i {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .answer {
-    font-size: 13px;
-    padding: 10px;
+    font-size: 0.813rem;
+    padding: 0.625rem;
   }
 }
 
@@ -803,7 +877,7 @@ input[type="text"]:focus {
   }
 
   .newsletterBox h3 {
-    font-size: 18px;
+    font-size: 1.125rem;
     text-align: center;
   }
 
@@ -834,19 +908,19 @@ input[type="text"]:focus {
   }
 
   .newsletterBox h3 {
-    font-size: 16px;
+    font-size: 1rem;
     width: 100%;
   }
 
   .newsletterBox input[type="email"] {
     width: 90%;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 
   .newsletterBox .btn {
     width: 70%;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     padding: 0.6rem;
   }
 }

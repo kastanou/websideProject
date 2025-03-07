@@ -35,8 +35,9 @@ body {
 }
 .textA {
   grid-area: textA;
-  padding: 4rem;
-  width: 40%;
+  padding: 3rem;
+  width: 50%;
+  line-height: 2.5rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
@@ -46,6 +47,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 80%;
+  line-height: 2.5rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
@@ -53,7 +55,7 @@ body {
   grid-area: pictureA;
   display: flex;
   justify-content: center;
-  padding: 8rem;
+  padding: 5rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
@@ -67,10 +69,9 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
-  height: 65vh;
-  padding-top: 8rem;
-  padding-bottom: 5rem;
-  gap: 4rem;
+  height: 120vh;
+  padding-top: 5rem;
+  gap: 3rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
@@ -196,6 +197,9 @@ body {
   color: var(--the-text-color);
   background-color: var(--the-secondary-blue-color);
 }
+.textContactUs p {
+  line-height: 1.8rem;
+}
 .pictureB {
   grid-area: pictureB;
   height: 70vh;
@@ -219,12 +223,15 @@ iframe {
   height: 50vh;
   padding-right: 10rem;
   padding-left: 3rem;
-  padding-top: 3rem;
+  padding-top: 6rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   background-color: var(--body-color);
   color: var(--the-text-color);
+}
+.textSideVideo h4 {
+  line-height: 2.5rem;
 }
 
 /* Responsive design*/
@@ -254,9 +261,6 @@ iframe {
 
   .textA,
   .textB {
-    width: 90%;
-    padding: 2rem;
-    text-align: left;
     margin: 0 auto;
   }
 
@@ -272,8 +276,6 @@ iframe {
   .information {
     flex-direction: column;
     align-items: center;
-    height: auto;
-    padding: 4rem 2rem;
     text-align: center;
   }
 
@@ -281,7 +283,7 @@ iframe {
   .goals,
   .values,
   .join {
-    width: 80%;
+    width: 70%;
   }
 
   .boxes {

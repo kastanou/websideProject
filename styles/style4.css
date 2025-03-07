@@ -80,8 +80,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: 300px;
-  max-height: 450px;
+  width: 18.75rem;
+  max-height: 28.125rem;
   margin: 5rem;
   transition: 0.3s ease-in-out;
 }
@@ -90,7 +90,7 @@ body {
   padding: 0.5rem;
 }
 .member p {
-  width: 250px;
+  width: 15.625rem;
   overflow-y: scroll;
 }
 .member img {
@@ -119,25 +119,25 @@ body {
     flex-direction: column;
     justify-content: left;
     align-items: center;
-    width: 250px;
-    max-height: 400px;
+    width: 15.625rem;
+    max-height: 25rem;
     margin: 3rem;
     transition: 0.3s ease-in-out;
   }
   .member p {
-    width: 180px;
+    width: 11.25rem;
     overflow-y: scroll;
   }
 
   .filterButtons {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 1.25rem;
   }
 
   .filterButtons button {
     padding: 12px 20px;
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -160,26 +160,26 @@ body {
     flex-direction: column;
     justify-content: left;
     align-items: center;
-    width: 250px;
-    max-height: 450px;
+    width: 15.625rem;
+    max-height: 28.125rem;
     margin: 1.5rem;
     transition: 0.3s ease-in-out;
   }
   .member p {
-    width: 200px;
+    width: 12.5rem;
     overflow-y: scroll;
   }
 
   .filterButtons {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 1.25rem;
     margin: 1rem 0;
   }
 
   .filterButtons button {
-    width: 100px;
-    padding: 10px;
-    font-size: 14px;
+    width: 6.25rem;
+    padding: 0.6rem;
+    font-size: 0.875rem;
   }
 }

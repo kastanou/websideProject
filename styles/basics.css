@@ -26,7 +26,7 @@ ul {
 .header {
   grid-area: header;
   width: 100vw;
-  height: 130px;
+  height: 8rem;
   display: block;
   background-color: var(--primary-color);
   color: var(--the-white-color);
@@ -38,6 +38,7 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 2rem;
 }
 .navbar {
   display: flex;
@@ -47,18 +48,19 @@ ul {
   text-align: center;
 }
 .logo img {
-  height: 150px;
+  height: 5rem;
+  padding-top: 1rem;
 }
 
 .navbar ul li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 1rem;
 }
 .navbar a {
   text-transform: uppercase;
   text-decoration: none;
   color: var(--the-white-color);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   display: block;
   position: relative;
@@ -68,7 +70,7 @@ ul {
 .navbar a::before {
   content: "";
   width: 100%;
-  height: 4px;
+  height: 0.25rem;
   position: absolute;
   left: 0;
   bottom: 0;
@@ -93,23 +95,32 @@ ul {
   align-items: center;
   justify-content: space-around;
 }
+
+.socialMedia ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
 .socialMedia ul li {
   display: inline-block;
-  padding-right: 10px;
+  margin: 0 0.5rem;
+  transition: transform 0.3s ease;
 }
+
 .socialMedia ul li:hover {
-  opacity: 0.6;
+  transform: translateY(-3px);
 }
 
 .btn {
   background-color: var(--button-color);
   color: #ffffff;
-  padding: 10px;
-  height: 2.8rem;
-  width: 10rem;
+  padding: 0.6rem;
+  height: 2.6rem;
+  width: 8rem;
   text-decoration: none;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   border-radius: 5px;
   transition: 0.3s ease;
 }
@@ -121,7 +132,7 @@ ul {
 .footer {
   grid-area: footer;
   width: 100vw;
-  height: 350px;
+  height: 22rem;
   display: block;
   bottom: 0;
   background-color: var(--primary-color);
@@ -153,8 +164,8 @@ ul {
   line-height: 2rem;
 }
 .box2 img {
-  height: 20px;
-  width: 20px;
+  height: 1.25rem;
+  width: 1.25rem;
 }
 .box2 li {
   padding: 0.5rem;
@@ -170,10 +181,10 @@ ul {
   padding: 0.3rem;
 }
 .box3 ul li a {
-  transition: font-weight 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
-.box3 ul li a:hover {
-  font-weight: 600;
+.box3 ul li:hover {
+  transform: translateX(3px);
 }
 .box4 {
   padding-top: 2rem;
@@ -186,10 +197,10 @@ ul {
   padding: 0.3rem;
 }
 .box4 ul li a {
-  transition: font-weight 0.3s ease-in-out;
+  transition: all 0.3s ease;
 }
-.box4 ul li a:hover {
-  font-weight: 600;
+.box4 ul li:hover {
+  transform: translateX(3px);
 }
 .rowEnd {
   display: flex;
@@ -218,15 +229,9 @@ ul {
   }
 
   .logo img {
-    height: 100px;
+    height: 5rem;
   }
 
-  .navbar ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px;
-  }
   .socialMedia {
     margin-top: 20px;
   }
@@ -235,7 +240,7 @@ ul {
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
-    font-size: 30px;
+    font-size: 1.875rem;
     cursor: pointer;
     text-align: center;
     margin: 10px 0;
@@ -247,7 +252,7 @@ ul {
   }
 
   .logo img {
-    height: 80px;
+    height: 5rem;
   }
 
   .navbar {
@@ -272,12 +277,12 @@ ul {
   .socialMedia ul {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem;
   }
 
   .socialMedia ul li img {
-    width: 25px;
-    height: 25px;
+    width: 1.563rem;
+    height: 1.563rem;
   }
 }
 
