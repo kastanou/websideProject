@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+	<!--Scripts-->
     <script src="scripts/scriptCarousel.js" defer></script>
     <script src="scripts/scriptFAQs.js" defer></script>
+	<script src="scripts/scriptForBurger.js" defer></script>
+	<!--Styles-->
     <link rel="stylesheet" href="styles/basics.css" />
     <link rel="stylesheet" href="styles/style1.css" />
     <link
@@ -19,22 +22,31 @@
   <body>
     <!--HEADER STARTS HERE-->
     <div class="header">
-      <header>
         <div class="container">
           <div class="logo">
             <a href="index.html">
               <img src="images/logo.jpg" />
             </a>
           </div>
+
           <div class="navbar">
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="schedule.html">Schedule</a></li>
-              <li><a href="the_team.html">The team</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html" class="navLink">Home</a></li>
+              <li><a href="about.html" class="navLink">About</a></li>
+              <li><a href="schedule.html" class="navLink">Schedule</a></li>
+              <li><a href="the_team.html" class="navLink">The team</a></li>
+              <li><a href="contact.html" class="navLink">Contact</a></li>
             </ul>
           </div>
+
+	<!-- Burger Icon -->
+      <div class="burgerMenu">
+        <span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+      </div>
+	  
+
           <div class="socialMedia">
             <ul>
               <li>
@@ -52,7 +64,6 @@
             </ul>
           </div>
         </div>
-      </header>
     </div>
     <!--HEADER ENDS HERE-->
 
@@ -111,7 +122,7 @@
 	Breathe in the fresh air, reconnect with nature, and challenge yourself with invigorating hikes through breathtaking landscapes. Whether you're seeking relaxation, energy, or adventure, our carefully crafted events offer something for everyone. <br>
 	Ready to plan your journey? 
       </p>
-      <a href="schedule.html" class="btn">The Schedule</a>
+      <a href="schedule.html" class="btn">Schedule</a>
     </div>
 
     <div class="fourPictures">
@@ -205,7 +216,7 @@
     <div class="accordion">
       <h2>Frequently Asked Questions</h2>
       <h4>
-        If you cant find any answer here , check out the community forum on X
+        If you can't find any answer here , check out the community forum on X
         (Twitter) or write us to support@email.com .
       </h4>
       <div class="faq">
