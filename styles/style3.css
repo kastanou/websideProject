@@ -30,6 +30,7 @@ body {
   padding: 1rem;
   text-align: center;
 }
+
 .retreatSchedule {
   grid-area: retreatSchedule;
   width: 100vw;
@@ -42,15 +43,18 @@ body {
 }
 
 .retreatSchedule h1 {
-  text-align: center;
-  font-size: 1.875rem;
+  text-align: left;
+  margin-left: 5rem;
   color: var(--button-color);
+  /* text-decoration: underline overline; */
 }
 .retreatSchedule p {
-  text-align: center;
+  text-align: left;
   color: var(--the-text-color);
-  font-size: 1.125rem;
+  margin-left: 5rem;
   margin-bottom: 5rem;
+  font-size: large;
+  font-style: italic;
 }
 .date {
   font-size: 1.5em;
@@ -128,6 +132,9 @@ body {
 
 /* Responsive design*/
 @media (max-width: 1024px) {
+  .startImage {
+    height: 25vh;
+  }
   .startImage h1 {
     left: 10%;
     width: 25%;
@@ -141,6 +148,8 @@ body {
 
   .scheduleDay {
     flex-direction: column;
+    gap: 3rem;
+    margin-left: 1rem;
   }
 
   .scheduleDay .date {
@@ -148,13 +157,19 @@ body {
   }
   .event {
     width: 80%;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
   }
 
+  .newsletterArea {
+    height: fit-content;
+  }
   .newsletterBox {
     width: 50%;
     left: 10%;
-    top: 20%;
-    padding: 1.5rem;
+    top: 5%;
+    padding: 1rem;
+    margin: 1rem;
   }
 
   .newsletterBox h3 {
@@ -197,6 +212,7 @@ body {
   .retreatSchedule h1,
   .retreatSchedule p {
     font-size: 1.1rem;
+    margin-left: 0.5rem;
   }
 
   .scheduleDay {
@@ -214,20 +230,6 @@ body {
     margin-left: 0;
     font-size: 1rem;
     left: 2%;
-  }
-
-  .newsletterArea {
-    height: 40vh;
-  }
-
-  .newsletterBox {
-    width: 80%;
-    left: 10%;
-    top: 15%;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
   }
 
   .newsletterBox h3 {

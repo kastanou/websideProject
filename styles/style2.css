@@ -35,18 +35,19 @@ body {
 }
 .textA {
   grid-area: textA;
-  padding: 3rem;
-  width: 50%;
+  margin-left: 5rem;
+  margin-top: 5rem;
+  width: 60%;
   line-height: 2.5rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
 .textB {
   grid-area: textB;
-  padding: 4rem;
+  margin-right: 5rem;
+  margin-top: 5rem;
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
   line-height: 2.5rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
@@ -55,7 +56,8 @@ body {
   grid-area: pictureA;
   display: flex;
   justify-content: center;
-  padding: 5rem;
+  margin-left: 1rem;
+  margin-top: 10rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
@@ -68,55 +70,34 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  text-align: center;
-  height: 120vh;
-  padding-top: 5rem;
+  height: 100vh;
+  margin-right: 5rem;
+  margin-left: 2rem;
+  margin-top: 10rem;
   gap: 3rem;
   background-color: var(--body-color);
   color: var(--the-text-color);
 }
 .information h4 {
-  width: 4rem;
-  height: 4rem;
+  width: 8rem;
+  height: 3rem;
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  border: var(--the-white-color) solid 1px;
-  border-radius: 50%;
+  text-align: center;
+  justify-content: left;
+  border: var(--the-white-color) solid 10px;
+  border-radius: 1rem;
   background-color: var(--the-white-color);
 }
-.who {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  gap: 2rem;
-}
-.goals {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  gap: 2rem;
-}
-.values {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  gap: 2rem;
-}
+.who,
+.goals,
+.values,
 .join {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-  gap: 2rem;
+  justify-content: left;
+  width: 40%;
+  gap: 1rem;
 }
 .boxes {
   color: var(--the-text-color);
@@ -193,7 +174,8 @@ body {
   flex-direction: column;
   align-items: left;
   gap: 2rem;
-  padding: 8rem;
+  padding-left: 5rem;
+  padding-top: 8rem;
   color: var(--the-text-color);
   background-color: var(--the-secondary-blue-color);
 }
@@ -221,10 +203,11 @@ iframe {
 .textSideVideo {
   grid-area: textSideVideo;
   height: 50vh;
-  padding-right: 10rem;
+  padding-right: 5rem;
   padding-left: 3rem;
   padding-top: 6rem;
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: var(--body-color);
@@ -232,6 +215,11 @@ iframe {
 }
 .textSideVideo h4 {
   line-height: 2.5rem;
+}
+.textSideVideo p {
+  margin-top: 2rem;
+  line-height: 2.5rem;
+  text-align: left;
 }
 
 /* Responsive design*/
@@ -251,7 +239,9 @@ iframe {
       "textSideVideo"
       "footer";
   }
-
+  .startImage {
+    height: 25vh;
+  }
   .startImage h1 {
     left: 10%;
     width: 25%;
@@ -261,11 +251,14 @@ iframe {
 
   .textA,
   .textB {
-    margin: 0 auto;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    line-height: 1.5rem;
   }
 
   .pictureA {
-    padding: 4rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
   }
 
   .pictureA img {
@@ -274,16 +267,20 @@ iframe {
   }
 
   .information {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    justify-content: left;
+    height: max-content;
   }
 
   .who,
   .goals,
   .values,
   .join {
-    width: 70%;
+    width: 100%;
+    height: fit-content;
+    line-height: 1.8rem;
   }
 
   .boxes {
@@ -304,17 +301,18 @@ iframe {
   .imagesCartoon {
     height: auto;
     justify-content: space-around;
-    margin: 5rem 0;
+    margin-top: 2rem;
+    gap: 4rem;
   }
-
+  .imagesCartoon img {
+    width: 110px;
+    height: 100px;
+  }
   .textContactUs {
     height: auto;
     padding: 3rem 1rem;
     margin: 5rem 0;
     text-align: left;
-  }
-  .textContactUs .btn {
-    align-self: center;
   }
   .pictureB {
     display: none;
@@ -330,30 +328,12 @@ iframe {
   }
 
   .textSideVideo {
-    height: auto;
+    height: fit-content;
     padding: 3rem 2rem;
-    text-align: center;
   }
 }
 
 @media (max-width: 768px) {
-  body {
-    grid-template-areas:
-      "header"
-      "startImage"
-      "textA"
-      "textB"
-      "pictureA"
-      "information"
-      "boxes"
-      "imagesCartoon"
-      "textContactUs"
-      "pictureB"
-      "video"
-      "textSideVideo"
-      "footer";
-  }
-
   .startImage {
     height: 25vh;
   }
@@ -365,34 +345,12 @@ iframe {
     padding: 0.6rem;
   }
 
-  .textA,
-  .textB {
-    width: 95%;
-    padding: 1.5rem;
-    text-align: left;
+  .textA {
+    font-size: small;
   }
-
-  .pictureA {
-    padding: 2rem;
-  }
-
   .pictureA img {
     width: 220px;
     height: 320px;
-  }
-
-  .information {
-    flex-direction: column;
-    height: auto;
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-
-  .who,
-  .goals,
-  .values,
-  .join {
-    width: 100%;
   }
 
   .boxes {
@@ -413,33 +371,18 @@ iframe {
 
   .imagesCartoon {
     flex-wrap: wrap;
-    height: auto;
+    height: min-content;
     justify-content: center;
-    margin: 10rem 0;
   }
-
-  .textContactUs {
-    height: auto;
-    padding: 3rem 1rem;
-    margin: 5rem 0;
-    text-align: left;
-  }
-  .pictureB {
-    display: none;
+  .imagesCartoon img {
+    width: 110px;
+    height: 100px;
   }
   .video {
     height: auto;
-    padding: 3rem 1rem;
+    padding: 1.5rem 0.5rem;
   }
-
-  iframe {
-    width: 100%;
-    height: 200px;
-  }
-
   .textSideVideo {
-    height: auto;
-    padding: 2rem 1rem;
-    text-align: center;
+    padding: 1.5rem 1rem;
   }
 }

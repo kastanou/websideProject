@@ -80,17 +80,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: left;
-  width: 18.75rem;
-  max-height: 28.125rem;
+  width: 19rem;
+  max-height: 28rem;
   margin: 5rem;
   transition: 0.3s ease-in-out;
 }
 .member h3,
 .member h4 {
-  padding: 0.5rem;
+  width: 16rem;
+  padding: 0.5rem 0;
 }
 .member p {
-  width: 15.625rem;
+  width: 16rem;
   overflow-y: scroll;
 }
 .member img {
@@ -100,6 +101,9 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .startImage {
+    height: 25vh;
+  }
   .startImage h1 {
     left: 10%;
     width: 25%;
@@ -129,7 +133,7 @@ body {
   }
 
   .member img {
-    width: 60%;
+    width: 55%;
   }
 
   .member p {
@@ -162,5 +166,9 @@ body {
     width: 40%;
     font-size: 0.875rem;
     padding: 10px 20px;
+  }
+
+  .member img {
+    width: 40%;
   }
 }
