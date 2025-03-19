@@ -593,8 +593,8 @@ input[type="text"]:focus {
   }
 
   .heroText .btn {
-    left: 5%;
-    bottom: 10%;
+    left: 50%;
+    bottom: 35%;
   }
 
   /* Responsive boxes */

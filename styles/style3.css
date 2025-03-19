@@ -5,6 +5,7 @@ body {
     "startImage startImage startImage startImage startImage"
     "retreatSchedule retreatSchedule retreatSchedule retreatSchedule retreatSchedule"
     "scheduleDay scheduleDay scheduleDay scheduleDay scheduleDay"
+    "pricingSection pricingSection pricingSection pricingSection pricingSection"
     "newsletterArea newsletterArea newsletterArea newsletterArea newsletterArea"
     "footer footer footer footer footer";
 }
@@ -46,7 +47,6 @@ body {
   text-align: left;
   margin-left: 5rem;
   color: var(--button-color);
-  /* text-decoration: underline overline; */
 }
 .retreatSchedule p {
   text-align: left;
@@ -93,6 +93,122 @@ body {
   text-align: left;
   font-size: large;
   line-height: 2rem;
+}
+
+.pricingSection {
+  grid-area: pricingSection;
+  width: 100%;
+  margin: 0 auto 50px auto;
+  padding: 1.25rem;
+}
+.pricingHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.pricingHeader h2 {
+  color: var(--the-text-color);
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 5rem;
+}
+
+.pricingHeader p {
+  color: var(--the-text-color);
+  text-align: left;
+  margin-left: 5rem;
+  font-size: large;
+  font-style: italic;
+}
+.pricingCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.pricingCard {
+  background-color: var(--the-white-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 19rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.cardHeader {
+  text-align: center;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--the-white-color);
+  margin-bottom: 0.9rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+}
+.cardPrice {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.cardPrice span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.cardFeatures {
+  margin-bottom: 1.6rem;
+}
+.cardFeatures li {
+  padding: 6px 0;
+  color: var(--the-text-color);
+  font-size: 0.875rem;
+}
+.cardFeatures li:before {
+  content: "✓";
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+.cardButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--the-white-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.cardButton:hover {
+  opacity: 0.8;
+}
+.featured {
+  position: relative;
+  border: 2px solid var(--primary-color);
+  transform: scale(1.05);
+}
+
+.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+.featuredTag {
+  position: absolute;
+  top: -0.75rem;
+  right: 1.25rem;
+  background-color: var(--primary-color);
+  color: var(--the-white-color);
+  padding: 5px 15px;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
 }
 
 .newsletterArea {
@@ -161,6 +277,31 @@ body {
     margin-bottom: 2rem;
   }
 
+  .pricingSection {
+    padding: 0.9rem;
+  }
+
+  .pricingHeader h2 {
+    margin-left: 0.5rem;
+  }
+  .pricingHeader p {
+    margin-left: 0.5rem;
+  }
+  .pricingCards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .pricingCard {
+    max-width: 22rem;
+  }
+
+  .featured {
+    transform: scale(1);
+    order: -1;
+  }
+
   .newsletterArea {
     height: fit-content;
   }
@@ -195,6 +336,7 @@ body {
       "startImage"
       "retreatSchedule"
       "scheduleDay"
+      "pricingSection"
       "newsletterArea"
       "footer";
   }

@@ -237,7 +237,21 @@ ul {
     flex-direction: column;
     align-items: center;
   }
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
 
+  .navbar ul li {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .navLink {
+    font-size: 1rem;
+    padding: 3px 0;
+  }
   .logo img {
     height: 5rem;
   }
