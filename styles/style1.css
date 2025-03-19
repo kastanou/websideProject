@@ -439,6 +439,7 @@ input[type="text"]:focus {
 .accordion {
   grid-area: accordion;
   width: 60vw;
+  height: 160vh;
   max-height: max-content;
   background-color: var(--the-white-color);
   border-radius: 8px;
