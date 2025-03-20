@@ -1,0 +1,250 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "startImage startImage startImage startImage startImage"
+    "contactDetails contactDetails contactForm contactForm contactForm"
+    "map map map map map"
+    "footer footer footer footer footer";
+}
+
+.startImage {
+  grid-area: startImage;
+  background-image: url("../images/contactpage.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 35vh;
+}
+.startImage h1 {
+  position: relative;
+  left: 15%;
+  top: 25%;
+  width: 15%;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
+  color: var(--the-text-color);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+}
+.contactDetails {
+  grid-area: contactDetails;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 30vw;
+  height: 130vh;
+  padding-left: 5rem;
+  padding-top: 4rem;
+}
+.contactDetails p {
+  line-height: 2rem;
+}
+.contactDetails li {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -1rem;
+}
+.contactDetails img {
+  height: 3rem;
+  width: 3rem;
+  margin-right: 5px;
+}
+.contactDetails p {
+  margin-bottom: 5px;
+}
+.contactForm {
+  font-family: "Oswald", serif;
+  grid-area: contactForm;
+  width: 90%;
+  max-width: 43.75rem;
+  margin: 0 auto;
+  padding-right: 5rem;
+  padding-top: 4rem;
+  text-align: left;
+}
+.contactForm label {
+  align-self: left;
+}
+.form-container {
+  color: black;
+  height: 40vh;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="tel"],
+select,
+textarea {
+  color: black;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+::placeholder {
+  color: black;
+}
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  background-color: var(--button-color);
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  max-width: 8rem;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+.hidden {
+  display: none;
+}
+
+.error {
+  font-weight: bold;
+  border-color: #c92432;
+  border-radius: 16px;
+  color: #c92432;
+  background-color: #fffafa;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.map {
+  grid-area: map;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  gap: 1.5rem;
+  margin: 4rem 0;
+  padding: 3rem;
+  border-radius: 1rem;
+  background-color: var(--the-secondary-blue-color);
+}
+.mapContainer {
+  width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+}
+
+/* Responsive design*/
+@media (max-width: 1024px) {
+  body {
+    grid-template-areas:
+      "header"
+      "startImage"
+      "contactDetails"
+      "contactForm"
+      "map"
+      "footer";
+  }
+  .startImage {
+    height: 25vh;
+  }
+  .startImage h1 {
+    left: 10%;
+    width: 25%;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+  .contactDetails {
+    padding: 2rem;
+    width: 100vw;
+    height: 40vh;
+  }
+  .contactForm {
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
+
+  .contactDetails li {
+    justify-content: center;
+  }
+
+  .contactForm input,
+  .contactForm select,
+  .contactForm textarea {
+    width: 100%;
+  }
+
+  .map {
+    width: 100%;
+    margin: 1rem 0;
+    height: max-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .startImage {
+    height: 25vh;
+  }
+
+  .startImage h1 {
+    left: 5%;
+    width: 50%;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+
+  .contactDetails {
+    padding: 1.5rem;
+    text-align: left;
+    width: 100%;
+    height: auto;
+  }
+  .contactForm {
+    padding: 1.5rem;
+  }
+
+  .contactDetails h2,
+  .contactForm h2 {
+    font-size: 1.25rem;
+  }
+
+  .contactDetails li {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .contactDetails img {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
+
+  .contactForm input,
+  .contactForm select,
+  .contactForm textarea {
+    width: 100%;
+  }
+  .contactForm label {
+    align-self: left;
+  }
+  .map {
+    width: 100%;
+  }
+  iframe {
+    width: 100%;
+    height: 18rem;
+  }
+}

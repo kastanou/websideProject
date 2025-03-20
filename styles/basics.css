@@ -172,6 +172,9 @@ ul {
   gap: 1rem;
   line-height: 1.5rem;
 }
+.box1 .logo {
+  margin-left: -1.1rem;
+}
 .box1 p {
   display: flex;
   align-content: center;
@@ -186,18 +189,24 @@ ul {
   gap: 1.5rem;
   line-height: 2.5rem;
 }
-
+.box2 li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.box2 p {
+  margin-bottom: 5px;
+}
 .box2 ul li img {
   height: 1.25rem;
   width: 1.25rem;
+  margin-right: 5px;
 }
 
-.box3 ul li a,
-.box4 ul li a {
+.box3 ul li a {
   transition: all 0.3s ease;
 }
-.box3 ul li:hover,
-.box4 ul li:hover {
+.box3 ul li:hover {
   transform: translateX(3px);
 }
 
@@ -205,6 +214,13 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 1.2rem;
+}
+.rowEnd a {
+  transition: transform 0.3s ease;
+}
+.rowEnd a:hover {
+  transform: scale(1.03);
 }
 .copyrights {
   margin-left: 2rem;
@@ -233,6 +249,9 @@ ul {
     width: 100vw;
     height: fit-content;
   }
+  .header .socialMedia {
+    display: none;
+  }
   .container {
     flex-direction: column;
     align-items: center;
@@ -242,7 +261,6 @@ ul {
     justify-content: center;
     padding: 0;
   }
-
   .navbar ul li {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -255,10 +273,6 @@ ul {
   .logo img {
     height: 5rem;
   }
-  .socialMedia {
-    display: none;
-  }
-
   .footer {
     width: 100vw;
     height: fit-content;
@@ -271,9 +285,6 @@ ul {
     gap: 2rem;
   }
   .box1 p {
-    display: none;
-  }
-  .socialMedia {
     display: none;
   }
   .box1,
@@ -311,7 +322,6 @@ ul {
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 999;
   }
-
   .navbar ul {
     flex-direction: column;
     width: 100%;
@@ -324,10 +334,6 @@ ul {
   .navbar.active {
     display: flex;
     animation: slideDown 0.3s ease-in-out;
-  }
-
-  .socialMedia {
-    display: none;
   }
   .columns {
     padding: 1rem;

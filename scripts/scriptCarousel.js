@@ -16,7 +16,7 @@ const startButton = document.getElementById("startButton");
 
 const submitButton = document.getElementById("submitButton");
 
-const timerInput = document.getElementById("timerInput");
+const timerInput = document.getElementById("timer");
 
 // Remove animation classes before adding new ones
 

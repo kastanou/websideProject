@@ -1,0 +1,393 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "startImage startImage startImage startImage startImage"
+    "retreatSchedule retreatSchedule retreatSchedule retreatSchedule retreatSchedule"
+    "scheduleDay scheduleDay scheduleDay scheduleDay scheduleDay"
+    "pricingSection pricingSection pricingSection pricingSection pricingSection"
+    "newsletterArea newsletterArea newsletterArea newsletterArea newsletterArea"
+    "footer footer footer footer footer";
+}
+
+.startImage {
+  grid-area: startImage;
+  background-image: url("../images/schedule.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 35vh;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.startImage h1 {
+  position: relative;
+  left: 15%;
+  top: 25%;
+  width: 15%;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
+  color: var(--the-text-color);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.retreatSchedule {
+  grid-area: retreatSchedule;
+  width: 100vw;
+  padding: 5rem;
+  color: var(--the-text-color);
+  background-color: var(--the-secondary-blue-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.retreatSchedule h1 {
+  text-align: left;
+  margin-left: 5rem;
+  color: var(--button-color);
+}
+.retreatSchedule p {
+  text-align: left;
+  color: var(--the-text-color);
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+  font-size: large;
+  font-style: italic;
+}
+.date {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event {
+  background: var(--the-transparent-color);
+  border-left: 4px solid white;
+  margin-left: 6rem;
+  width: 53rem;
+  margin-bottom: 6rem;
+}
+
+.scheduleDay {
+  grid-area: scheduleDay;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin-left: 4rem;
+}
+
+.scheduleDay h2 {
+  border-bottom: 2px solid var(--primary-color);
+  padding: 1rem;
+}
+
+.scheduleDay ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.scheduleDay ul li {
+  color: var(--the-text-color);
+  text-align: left;
+  font-size: large;
+  line-height: 2rem;
+}
+
+.pricingSection {
+  grid-area: pricingSection;
+  width: 100%;
+  margin: 0 auto 50px auto;
+  padding: 1.25rem;
+}
+.pricingHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.pricingHeader h2 {
+  color: var(--the-text-color);
+  margin-bottom: 1rem;
+  text-align: left;
+  margin-left: 5rem;
+}
+
+.pricingHeader p {
+  color: var(--the-text-color);
+  text-align: left;
+  margin-left: 5rem;
+  font-size: large;
+  font-style: italic;
+}
+.pricingCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.pricingCard {
+  background-color: var(--the-white-color);
+  border-radius: 0.75rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  max-width: 19rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricingCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+.cardHeader {
+  text-align: center;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--the-white-color);
+  margin-bottom: 0.9rem;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.6rem;
+}
+.cardPrice {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+}
+
+.cardPrice span {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.cardFeatures {
+  margin-bottom: 1.6rem;
+}
+.cardFeatures li {
+  padding: 6px 0;
+  color: var(--the-text-color);
+  font-size: 0.875rem;
+}
+.cardFeatures li:before {
+  content: "✓";
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+.cardButton {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--the-white-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.cardButton:hover {
+  opacity: 0.8;
+}
+.featured {
+  position: relative;
+  border: 2px solid var(--primary-color);
+  transform: scale(1.05);
+}
+
+.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+.featuredTag {
+  position: absolute;
+  top: -0.75rem;
+  right: 1.25rem;
+  background-color: var(--primary-color);
+  color: var(--the-white-color);
+  padding: 5px 15px;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.newsletterArea {
+  grid-area: newsletterArea;
+  background-image: url("../images/yoga-park_249974-26055.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+  width: 100vw;
+  height: 55vh;
+}
+.newsletterBox {
+  z-index: 2;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  position: relative;
+  left: 15%;
+  top: 25%;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
+  border-radius: 15px;
+  padding: 1rem;
+}
+.newsletterBox input[type="email"] {
+  width: 50%;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+/* Responsive design*/
+@media (max-width: 1024px) {
+  .startImage {
+    height: 25vh;
+  }
+  .startImage h1 {
+    left: 10%;
+    width: 25%;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .retreatSchedule {
+    padding: 1rem;
+  }
+
+  .scheduleDay {
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 1rem;
+  }
+
+  .scheduleDay .date {
+    align-self: center;
+  }
+  .event {
+    width: 80%;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .pricingSection {
+    padding: 0.9rem;
+  }
+
+  .pricingHeader h2 {
+    margin-left: 0.5rem;
+  }
+  .pricingHeader p {
+    margin-left: 0.5rem;
+  }
+  .pricingCards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .pricingCard {
+    max-width: 22rem;
+  }
+
+  .featured {
+    transform: scale(1);
+    order: -1;
+  }
+
+  .newsletterArea {
+    height: fit-content;
+  }
+  .newsletterBox {
+    width: 50%;
+    left: 10%;
+    top: 5%;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .newsletterBox h3 {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .newsletterBox input[type="email"] {
+    width: 80%;
+  }
+
+  .newsletterBox .btn {
+    width: 50%;
+    text-align: center;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "startImage"
+      "retreatSchedule"
+      "scheduleDay"
+      "pricingSection"
+      "newsletterArea"
+      "footer";
+  }
+
+  .startImage h1 {
+    left: 5%;
+    width: 50%;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+
+  .retreatSchedule {
+    padding: 2rem;
+  }
+  .retreatSchedule h1,
+  .retreatSchedule p {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+  }
+
+  .scheduleDay {
+    flex-direction: column;
+    gap: 0;
+    margin-left: 0;
+  }
+
+  .event {
+    width: 100%;
+    font-size: 0.8rem;
+    margin-left: 0;
+  }
+  .event ul li {
+    margin-left: 0;
+    font-size: 1rem;
+    left: 2%;
+  }
+
+  .newsletterBox h3 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .newsletterBox input[type="email"] {
+    width: 90%;
+    font-size: 0.875rem;
+  }
+
+  .newsletterBox .btn {
+    width: 70%;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.6rem;
+  }
+}

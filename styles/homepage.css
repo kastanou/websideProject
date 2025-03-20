@@ -1,0 +1,930 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "heroImage heroImage heroImage heroImage heroImage "
+    "boxes boxes sidetextTeam sidetextTeam sidetextTeam"
+    "imageA imageA imageA imageA imageA"
+    "sidetextSchedule fourPictures fourPictures fourPictures fourPictures"
+    "sponsors sponsors sponsors sponsors sponsors"
+    "carousel carousel carousel carousel carousel"
+    "accordion accordion accordion yogaSvg yogaSvg"
+    "newsletterArea newsletterArea newsletterArea newsletterArea newsletterArea"
+    "footer footer footer footer footer";
+}
+.heroImage {
+  grid-area: heroImage;
+  background-image: url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  max-width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.greyOverlay {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 50%;
+  height: 100%;
+  opacity: 0.5;
+  background: var(--the-white-color);
+}
+.heroText {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.heroText h3 {
+  line-height: 1.8rem;
+  width: 40%;
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  text-align: left;
+  color: var(--the-text-color);
+  font-size: clamp(1.5rem, 2vw);
+}
+.heroText p {
+  line-height: 1.8rem;
+  width: 40%;
+  position: absolute;
+  left: 5%;
+  top: 30%;
+  text-align: left;
+  font-weight: bold;
+  color: var(--the-text-color);
+  font-size: clamp(1.2rem, 2vw);
+}
+.heroText .btn {
+  position: absolute;
+  left: 5%;
+  bottom: 15%;
+  width: clamp(8rem, 1vw);
+  height: clamp(2.6rem, 0.5vh);
+}
+.boxes {
+  color: var(--the-text-color);
+  background-color: var(--body-color);
+  margin-left: 5rem;
+  grid-area: boxes;
+  display: flex;
+  flex-direction: row;
+}
+.boxColumnFirst {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+.boxColumnSecond {
+  display: flex;
+  flex-direction: column;
+  margin-top: 6rem;
+}
+.boxDays {
+  padding: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.boxActivities {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.boxSponsors {
+  padding: 1.5rem;
+  margin-left: 5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.boxInstructors {
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 7rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.sidetextTeam {
+  grid-area: sidetextTeam;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 5rem;
+  height: 80vh;
+  width: 100%;
+  overflow: hidden;
+}
+.sidetextTeam p {
+  line-height: 1.8rem;
+  padding-bottom: 3rem;
+}
+
+.imageA {
+  grid-area: imageA;
+  background-image: url("../images/takeshi-yu-2gGPUM_z1XA-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 40vh;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.sidetextSchedule {
+  grid-area: sidetextSchedule;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 2rem;
+  padding-left: 5rem;
+  padding-top: 3rem;
+  width: 40vw;
+  height: 90vh;
+}
+.sidetextSchedule p {
+  line-height: 1.8rem;
+}
+.fourPictures {
+  grid-area: fourPictures;
+  margin-right: 5rem;
+}
+.firstTwoPictures,
+.secondTwoPictures {
+  display: flex;
+  flex-direction: row;
+  height: 40%;
+  gap: 2rem;
+  margin: 2rem;
+  justify-content: center;
+}
+.firstTwoPictures img,
+.secondTwoPictures img {
+  width: 21rem;
+  border-radius: 10px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.08);
+}
+.sponsors {
+  grid-area: sponsors;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 100vw;
+  height: 70vh;
+  text-align: center;
+  background-color: var(--the-secondary-blue-color);
+  color: var(--the-text-color);
+}
+.sponsors img {
+  width: 7rem;
+  height: 9rem;
+}
+.sponsorsLogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+.carousel {
+  grid-area: carousel;
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-color);
+}
+.textBeforeCarousel {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 2rem;
+  margin-right: 4rem;
+  line-height: 1.8rem;
+}
+.slideContainer {
+  position: relative;
+  width: 50rem;
+  height: 22rem;
+  border: 3px solid var(--the-transparent-color);
+  box-shadow: 0 0 8px 2px rgb(0, 0, 0, 0.2);
+  border-radius: 12px;
+}
+.slideContainer .slides {
+  width: 100%;
+  height: calc(100% - 40px);
+  position: relative;
+  overflow: hidden;
+}
+.slideContainer .slides > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease-in-out;
+}
+.slideContainer .slides > img:not(.active) {
+  top: 0;
+  left: -100%;
+}
+.slideContainer .slides > img.active {
+  transform: scale(1.05);
+}
+
+#next,
+#prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 14px;
+  color: #eee;
+  font-size: 2.125rem;
+  font-weight: bold;
+  transition: 0.5s;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 1;
+}
+#next {
+  right: 1.25rem;
+}
+#prev {
+  left: 1.25rem;
+}
+#next:hover,
+#prev:hover {
+  background-color: #ede6d6;
+  opacity: 0.8;
+  color: #222;
+}
+.dotsContainer {
+  position: absolute;
+  bottom: 5px;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dotsContainer .dot {
+  width: 15px;
+  height: 15px;
+  margin: 0px 2px;
+  border: 3px solid #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: all 0.6s ease;
+}
+.dotsContainer .active {
+  background-color: #555;
+  transform: scale(1.2);
+}
+.userControl {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+.controlButton {
+  width: 6.25rem;
+  height: 3.125rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #ebecf0;
+  color: var(--the-text-color);
+  border: var(--the-text-color) 2px solid;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.controlButton:hover {
+  background-color: black;
+  color: #ebecf0;
+}
+.formTimer {
+  background-color: #ebecf0;
+  padding: 20px;
+  color: var(--the-text-color);
+  border: var(--the-text-color) 1px solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 12rem;
+  text-align: center;
+}
+#submitButton {
+  border: none;
+  width: 4.375rem;
+  height: 2.5rem;
+  background-color: white;
+  color: var(--the-text-color);
+  border: var(--the-text-color) 2px solid;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+#submitButton:hover {
+  background-color: black;
+  color: #ebecf0;
+}
+label {
+  font-size: 1.5rem;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: #333;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #555;
+  outline: none;
+}
+
+@keyframes next1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes next2 {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+
+@keyframes prev1 {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes prev2 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+.slideNext1 {
+  animation: next1 0.5s ease-in forwards;
+}
+.slideNext2 {
+  animation: next2 0.5s ease-in forwards;
+}
+.slidePrev1 {
+  animation: prev1 0.5s ease-in forwards;
+}
+.slidePrev2 {
+  animation: prev2 0.5s ease-in forwards;
+}
+
+.accordion {
+  grid-area: accordion;
+  width: 60vw;
+  min-height: 160vh;
+  max-height: max-content;
+  background-color: var(--the-white-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 5rem;
+}
+
+.accordion h2 {
+  padding: 1rem;
+}
+.accordion h4 {
+  padding: 1rem;
+  width: 600px;
+  line-height: 1.7rem;
+}
+
+.faq {
+  width: 50rem;
+  border-bottom: 5px solid var(--the-white-color);
+}
+
+.accordionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  text-align: left;
+  background-color: var(--the-secondary-blue-color);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.accordionButton i {
+  transition: transform 0.3s ease;
+}
+
+.accordionButton.active i {
+  transform: rotate(180deg);
+}
+
+.accordionButton:hover {
+  background-color: var(--primary-color);
+}
+
+.answer {
+  display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #393333;
+}
+
+.accordionButton.active + .answer {
+  display: block;
+}
+
+.yogaSvg {
+  grid-area: yogaSvg;
+  width: 40vw;
+  height: 160vh;
+  background-color: var(--the-white-color);
+  padding-top: 12rem;
+  padding-right: 5rem;
+}
+#objects {
+  animation: glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+  }
+  100% {
+    filter: drop-shadow(0 0 25px rgba(0, 0, 0, 0.8));
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.backgroundObject:nth-child(1),
+.backgroundObject:nth-child(2),
+.backgroundObject:nth-child(3),
+.backgroundObject:nth-child(4) {
+  animation: rotate 15s linear infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.newsletterArea {
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+  grid-area: newsletterArea;
+  background-image: url("../images/outdoor-yoga-session.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 55vh;
+}
+.newsletterBox {
+  z-index: 2;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  position: relative;
+  left: 15%;
+  top: 25%;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
+  border-radius: 15px;
+  padding: 1rem;
+}
+.newsletterBox input[type="email"] {
+  width: 50%;
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 4px;
+}
+
+/*Responsive design*/
+@media (max-width: 1024px) {
+  /*Responsive hero image section*/
+  .heroImage {
+    height: 40vh;
+  }
+
+  .greyOverlay {
+    width: 100%;
+  }
+
+  .heroText {
+    width: 100%;
+  }
+
+  .heroText h3 {
+    top: 10%;
+  }
+  .herotext p {
+    left: 2%;
+    top: 20%;
+  }
+
+  .heroText .btn {
+    left: 50%;
+    bottom: 35%;
+  }
+
+  /* Responsive boxes */
+  .boxes {
+    width: 50%;
+    height: 70%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  .boxColumnFirst {
+    flex-direction: row;
+    margin-top: 0.5rem;
+    height: 30%;
+  }
+  .boxColumnSecond {
+    flex-direction: row;
+    margin-top: 1rem;
+    height: 30%;
+  }
+
+  .boxActivities,
+  .boxInstructors {
+    margin-left: 1rem;
+  }
+
+  .boxSponsors {
+    margin-left: 2rem;
+  }
+  .boxDays,
+  .boxActivities,
+  .boxSponsors,
+  .boxInstructors {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Responsive sidetexts*/
+  .sidetextTeam {
+    gap: 1rem;
+    padding: 0;
+    margin: 2rem 0;
+    padding-right: 2rem;
+    height: max-content;
+  }
+  .sidetextSchedule {
+    height: max-content;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  /* Responsive four images*/
+  .firstTwoPictures,
+  .secondTwoPictures {
+    flex-direction: column;
+    align-items: center;
+  }
+  .firstTwoPictures img,
+  .secondTwoPictures img {
+    width: 12rem;
+    height: 10rem;
+  }
+
+  /* Responsive sponsors & carousel*/
+  .sponsors {
+    height: auto;
+    padding: 3rem;
+  }
+
+  .sponsors img {
+    width: 6.25rem;
+    height: 7.5rem;
+  }
+
+  .sponsorsLogos {
+    gap: 3rem;
+  }
+  .carousel {
+    flex-direction: column;
+    gap: 3rem;
+    height: fit-content;
+    margin: 2rem 0;
+  }
+  .textBeforeCarousel {
+    width: 80%;
+  }
+  .slideContainer {
+    width: 80%;
+  }
+  .dotsContainer .dot {
+    margin: 0px 18px;
+  }
+  .userControl {
+    flex-direction: row;
+  }
+  .controlButton {
+    width: 5rem;
+    height: 5rem;
+  }
+  .formTimer {
+    width: 12rem;
+  }
+
+  /* Responsive faqs */
+  .accordion {
+    width: 100vw;
+    padding: 3rem;
+    height: max-content;
+  }
+
+  .accordion h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .accordion h4 {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .faq {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .accordionButton {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+
+  .answer {
+    width: 100%;
+    font-size: 0.875rem;
+    padding: 0.75rem;
+  }
+  .yogaSvg {
+    display: none;
+  }
+
+  /* Responsive newsletter section*/
+  .newsletterArea {
+    height: fit-content;
+  }
+  .newsletterBox {
+    width: 50%;
+    left: 10%;
+    top: 5%;
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .newsletterBox h3 {
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .newsletterBox input[type="email"] {
+    width: 80%;
+  }
+
+  .newsletterBox .btn {
+    width: 50%;
+    text-align: center;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroImage {
+    height: 50vh;
+  }
+
+  .greyOverlay {
+    width: 100%;
+  }
+
+  .heroText h3 {
+    width: 100%;
+    left: 5%;
+    top: 35%;
+  }
+  .heroText p {
+    display: none;
+  }
+
+  .heroText .btn {
+    left: 15%;
+    bottom: 15%;
+  }
+
+  .boxColumnFirst {
+    flex-direction: column;
+    align-items: center;
+  }
+  .boxColumnSecond {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .boxActivities,
+  .boxInstructors,
+  .boxSponsors {
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
+
+  .boxDays,
+  .boxActivities,
+  .boxSponsors,
+  .boxInstructors {
+    width: 6rem;
+    height: 6rem;
+  }
+  .sidetextTeam {
+    width: 60%;
+  }
+  .sidetextTeam h3,
+  .sidetextSchedule h3 {
+    font-size: 1.125rem;
+  }
+
+  .sidetextTeam p,
+  .sidetextSchedule p {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+
+  .sidetextTeam .btn,
+  .sidetextSchedule .btn {
+    align-self: center;
+    font-size: 0.9rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .firstTwoPictures img,
+  .secondTwoPictures img {
+    width: 11rem;
+    height: 9rem;
+  }
+
+  .sponsors {
+    padding: 2rem;
+    height: auto;
+  }
+
+  .sponsors h1 {
+    font-size: 22px;
+  }
+
+  .sponsors img {
+    width: 5rem;
+    height: 6.25rem;
+  }
+
+  .sponsorsLogos {
+    gap: 2rem;
+  }
+  .carousel {
+    height: fit-content;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
+  #next,
+  #prev {
+    display: none;
+  }
+  .userControl {
+    display: none;
+  }
+  .textBeforeCarousel {
+    width: 80%;
+  }
+  .slideContainer {
+    width: 100%;
+  }
+  .dotsContainer .dot {
+    margin: 0px 8px;
+  }
+
+  .accordion h2 {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .accordion h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 1rem;
+  }
+
+  .faq {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .accordionButton {
+    font-size: 0.875rem;
+    padding: 0.625rem;
+  }
+
+  .accordionButton i {
+    font-size: 0.875rem;
+  }
+
+  .answer {
+    font-size: 0.813rem;
+    padding: 0.625rem;
+  }
+
+  .newsletterBox h3 {
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .newsletterBox input[type="email"] {
+    width: 90%;
+    font-size: 0.875rem;
+  }
+
+  .newsletterBox .btn {
+    width: 70%;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.6rem;
+  }
+}

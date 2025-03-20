@@ -1,0 +1,388 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "startImage startImage startImage startImage startImage"
+    "textA textB textB textB textB"
+    "pictureA information information information information"
+    "boxes boxes boxes boxes boxes"
+    "imagesCartoon imagesCartoon imagesCartoon imagesCartoon imagesCartoon"
+    "textContactUs textContactUs textContactUs pictureB pictureB"
+    "video video video textSideVideo textSideVideo"
+    "footer footer footer footer footer";
+}
+
+.startImage {
+  grid-area: startImage;
+  background-image: url("../images/14796597.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 35vh;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.startImage h1 {
+  position: relative;
+  left: 15%;
+  top: 25%;
+  width: 15%;
+  border: var(--the-text-color) solid 1px;
+  background-color: var(--the-transparent-color);
+  color: var(--the-text-color);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+}
+.textA {
+  grid-area: textA;
+  margin-left: 5rem;
+  margin-top: 5rem;
+  width: 60%;
+  line-height: 2.5rem;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+}
+.textB {
+  grid-area: textB;
+  margin-right: 5rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2.5rem;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+}
+.pictureA {
+  grid-area: pictureA;
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-top: 10rem;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+}
+.pictureA img {
+  width: 300px;
+  height: 450px;
+}
+.information {
+  grid-area: information;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+  margin-right: 5rem;
+  margin-left: 2rem;
+  margin-top: 10rem;
+  gap: 3rem;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+}
+.information h4 {
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: left;
+  border: var(--the-white-color) solid 10px;
+  border-radius: 1rem;
+  background-color: var(--the-white-color);
+}
+.who,
+.goals,
+.values,
+.join {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 40%;
+  gap: 1rem;
+}
+.boxes {
+  color: var(--the-text-color);
+  background-color: var(--the-secondary-blue-color);
+  height: 40vh;
+  padding-left: 2rem;
+  grid-area: boxes;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.boxDays {
+  padding: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.boxActivities {
+  padding: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.boxSponsors {
+  padding: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.boxInstructors {
+  padding: 1.5rem;
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--the-white-color);
+}
+.imagesCartoon {
+  grid-area: imagesCartoon;
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  margin-top: 8rem;
+}
+.imagesCartoon img {
+  width: 125px;
+  height: 130px;
+}
+.textContactUs {
+  grid-area: textContactUs;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 2rem;
+  padding-left: 5rem;
+  padding-top: 8rem;
+  color: var(--the-text-color);
+  background-color: var(--the-secondary-blue-color);
+}
+.textContactUs p {
+  line-height: 1.8rem;
+}
+.pictureB {
+  grid-area: pictureB;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: var(--the-secondary-blue-color);
+}
+
+.video {
+  grid-area: video;
+  height: 80vh;
+  padding-left: 5rem;
+  padding-top: 8rem;
+}
+iframe {
+  width: 100%;
+}
+.textSideVideo {
+  grid-area: textSideVideo;
+  height: 50vh;
+  padding-right: 5rem;
+  padding-left: 3rem;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--body-color);
+  color: var(--the-text-color);
+}
+.textSideVideo h4 {
+  line-height: 2.5rem;
+}
+.textSideVideo p {
+  margin-top: 2rem;
+  line-height: 2.5rem;
+  text-align: left;
+}
+
+/* Responsive design*/
+@media (max-width: 1024px) {
+  body {
+    grid-template-areas:
+      "header"
+      "startImage"
+      "textA"
+      "textB"
+      "pictureA"
+      "information"
+      "boxes"
+      "imagesCartoon"
+      "textContactUs"
+      "video"
+      "textSideVideo"
+      "footer";
+  }
+  .startImage {
+    height: 25vh;
+  }
+  .startImage h1 {
+    left: 10%;
+    width: 25%;
+    font-size: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .textA,
+  .textB {
+    margin-left: 2rem;
+    margin-top: 2rem;
+    line-height: 1.5rem;
+  }
+
+  .pictureA {
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+
+  .pictureA img {
+    width: 250px;
+    height: 380px;
+  }
+
+  .information {
+    margin-left: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    justify-content: left;
+    height: max-content;
+  }
+
+  .who,
+  .goals,
+  .values,
+  .join {
+    width: 100%;
+    height: fit-content;
+    line-height: 1.8rem;
+  }
+
+  .boxes {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .boxDays,
+  .boxActivities,
+  .boxSponsors,
+  .boxInstructors {
+    width: 140px;
+    height: 140px;
+    margin: 0.5rem;
+  }
+
+  .imagesCartoon {
+    height: auto;
+    justify-content: space-around;
+    margin-top: 2rem;
+    gap: 4rem;
+  }
+  .imagesCartoon img {
+    width: 110px;
+    height: 100px;
+  }
+  .textContactUs {
+    height: auto;
+    padding: 3rem 1rem;
+    margin: 5rem 0;
+    text-align: left;
+  }
+  .pictureB {
+    display: none;
+  }
+  .video {
+    height: auto;
+    padding: 4rem 2rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: 250px;
+  }
+
+  .textSideVideo {
+    height: fit-content;
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .startImage {
+    height: 25vh;
+  }
+
+  .startImage h1 {
+    left: 5%;
+    width: 50%;
+    font-size: 1.3rem;
+    padding: 0.6rem;
+  }
+
+  .textA {
+    font-size: small;
+  }
+  .pictureA img {
+    width: 220px;
+    height: 320px;
+  }
+
+  .boxes {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .boxDays,
+  .boxActivities,
+  .boxSponsors,
+  .boxInstructors {
+    width: 120px;
+    height: 120px;
+    margin: 0.5rem;
+  }
+
+  .imagesCartoon {
+    flex-wrap: wrap;
+    height: min-content;
+    justify-content: center;
+  }
+  .imagesCartoon img {
+    width: 110px;
+    height: 100px;
+  }
+  .video {
+    height: auto;
+    padding: 1.5rem 0.5rem;
+  }
+  .textSideVideo {
+    padding: 1.5rem 1rem;
+  }
+}
