@@ -10,7 +10,7 @@ body {
 
 .startImage {
   grid-area: startImage;
-  background-image: url("../images/teampage.jpg");
+  background-image: url("../images/team/teampage.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;

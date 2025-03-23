@@ -14,7 +14,7 @@ body {
 }
 .heroImage {
   grid-area: heroImage;
-  background-image: url("../images/hero.jpg");
+  background-image: url("../images/homepage/hero.jpg");
   background-size: cover;
   background-position: center;
   max-width: 100vw;
@@ -51,7 +51,6 @@ body {
   top: 20%;
   text-align: left;
   color: var(--the-text-color);
-  font-size: clamp(1.5rem, 2vw);
 }
 .heroText p {
   line-height: 1.8rem;
@@ -62,7 +61,6 @@ body {
   text-align: left;
   font-weight: bold;
   color: var(--the-text-color);
-  font-size: clamp(1.2rem, 2vw);
 }
 .heroText .btn {
   position: absolute;
@@ -158,7 +156,7 @@ body {
 
 .imageA {
   grid-area: imageA;
-  background-image: url("../images/takeshi-yu-2gGPUM_z1XA-unsplash.jpg");
+  background-image: url("../images/homepage/takeshi-yu-2gGPUM_z1XA-unsplash.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -541,7 +539,7 @@ input[type="text"]:focus {
   background-color: var(--body-color);
   color: var(--the-text-color);
   grid-area: newsletterArea;
-  background-image: url("../images/outdoor-yoga-session.jpg");
+  background-image: url("../images/homepage/outdoor-yoga-session.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -566,6 +564,7 @@ input[type="text"]:focus {
 }
 .newsletterBox input[type="email"] {
   width: 50%;
+  height: 2.5rem;
   padding: 0.5rem;
   border: 1px solid #333;
   border-radius: 4px;
@@ -579,24 +578,21 @@ input[type="text"]:focus {
   }
 
   .greyOverlay {
-    width: 100%;
-  }
-
-  .heroText {
-    width: 100%;
+    width: 60%;
   }
 
   .heroText h3 {
-    top: 10%;
+    width: 100%;
+    left: 5%;
+    top: 35%;
   }
-  .herotext p {
-    left: 2%;
-    top: 20%;
+  .heroText p {
+    display: none;
   }
 
   .heroText .btn {
-    left: 50%;
-    bottom: 35%;
+    left: 15%;
+    bottom: 15%;
   }
 
   /* Responsive boxes */
@@ -761,9 +757,9 @@ input[type="text"]:focus {
   }
 
   .newsletterBox .btn {
-    width: 50%;
-    text-align: center;
-    padding: 0.7rem;
+    width: 30%;
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 }
 
@@ -774,20 +770,6 @@ input[type="text"]:focus {
 
   .greyOverlay {
     width: 100%;
-  }
-
-  .heroText h3 {
-    width: 100%;
-    left: 5%;
-    top: 35%;
-  }
-  .heroText p {
-    display: none;
-  }
-
-  .heroText .btn {
-    left: 15%;
-    bottom: 15%;
   }
 
   .boxColumnFirst {

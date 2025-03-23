@@ -3,42 +3,42 @@
     {
       "name": "Olivia Parker",
       "category": "yoga",
-      "image": "../images/teacher1.jpg",
+      "image": "../images/team/teacher1.jpg",
       "title": "Our yoga instructor - The Mindful Flow Guide",
       "description": "Olivia Parker is a passionate and experienced yoga instructor known for her mindful, fluid teaching style that blends breathwork, meditation, and movement. She specializes in Vinyasa and Hatha yoga, crafting classes that emphasize body awareness, strength, and inner peace. Her sessions are designed to be both physically invigorating and deeply meditative, allowing students to connect with their breath and body in a harmonious way. Olivia believes that yoga is not just about physical postures but a journey toward self-discovery and balance. Whether she is guiding a powerful flow or a gentle restorative session, she ensures that every student feels supported and empowered in their practice. Her compassionate approach makes her classes accessible to all levels, from beginners seeking a strong foundation to advanced practitioners refining their technique. Olivia’s background in mindfulness meditation also adds a unique depth to her classes, helping students cultivate focus, reduce stress, and enhance overall well-being. With her calming presence and encouraging spirit, Olivia creates a welcoming space where students can explore movement, build resilience, and embrace the present moment with grace."
     },
     {
       "name": "Sophia Mitchell",
       "category": "pilates",
-      "image": "../images/teacher2.jpg",
+      "image": "../images/team/teacher2.jpg",
       "title": "Our pilates instructor - The Core Strength Specialist",
       "description": "Sophia Mitchell is a dedicated and highly skilled Pilates instructor with a passion for helping students build strength, stability, and body awareness. With a background in classical Pilates, she emphasizes core engagement, proper alignment, and controlled movements to create a well-balanced, full-body workout. Her teaching style is precise yet encouraging, ensuring that students develop a strong foundation while gradually advancing their practice. Sophia believes that Pilates is not just about physical fitness but also about cultivating mindfulness and grace in movement. Her classes range from beginner-friendly mat Pilates to challenging reformer sessions, catering to individuals of all skill levels. With a deep understanding of anatomy, she customizes exercises to accommodate different body types and fitness goals, making her sessions both safe and effective. Sophia’s warm, supportive nature allows her students to feel empowered as they strengthen their core, improve posture, and enhance overall mobility. Whether she is guiding a gentle flow or an intense sculpting session, she inspires her students to move with intention, precision, and confidence."
     },
     {
       "name": "Ethan Harrison",
       "category": "taichi",
-      "image": "../images/teacher3.jpg",
+      "image": "../images/team/teacher3.jpg",
       "title": "Our Tai Chi teacher - The Traditional Tai Chi Mentor",
       "description": "Ethan Harrison is a highly respected Tai Chi instructor with decades of experience in the art of mindful movement and internal energy cultivation. His teachings emphasize the harmonious flow of energy (Qi), precise movements, and deep breathing techniques to promote balance, flexibility, and inner peace. He specializes in Yang-style Tai Chi, known for its graceful and meditative sequences, but also incorporates elements of Qigong for enhanced vitality and stress relief. Ethan believes that Tai Chi is more than just an exercise—it is a way of life that fosters physical health, mental clarity, and emotional resilience. His calm demeanor and patient teaching approach make his classes accessible to students of all ages and fitness levels, whether they are beginners or advanced practitioners seeking to refine their form. Through his guidance, students not only improve posture and mobility but also cultivate a sense of tranquility that extends beyond the practice. With a deep respect for tradition and a compassionate approach to teaching, Ethan inspires his students to move with mindfulness and embrace the principles of balance, flow, and harmony in both Tai Chi and daily life."
     },
     {
       "name": "Emily Carter",
       "category": "yoga",
-      "image": "../images/teacher4.jpg",
+      "image": "../images/team/teacher4.jpg",
       "title": "Our yoga instructor - The Strength & Balance Expert",
       "description": "Emily Carter is a dedicated yoga instructor who merges strength, flexibility, and mindfulness to create a well-rounded practice. With a background in Ashtanga and Power Yoga, her classes are dynamic and energizing, focusing on building core stability, endurance, and mental clarity. She believes in challenging her students while maintaining a strong emphasis on alignment and breath control, ensuring that each posture is executed safely and effectively. Her teaching style is engaging and motivating, making her classes ideal for those looking to enhance their athletic performance, improve mobility, or develop a stronger mind-body connection. Emily’s journey into yoga began as a way to complement her active lifestyle, but she soon discovered its profound impact on mental resilience and stress management. She now integrates elements of mindfulness and meditation into her sessions, helping students not only build physical strength but also cultivate inner balance."
     },
     {
       "name": "Emma Bennett",
       "category": "pilates",
-      "image": "../images/teacher5.png",
+      "image": "../images/team/teacher5.png",
       "title": "Our pilates instructor - The Balanced Movement Guide",
       "description": "Emma Bennett is a thoughtful and methodical Pilates instructor who focuses on precision, alignment, and mindful movement. With a background in contemporary Pilates and rehabilitation-focused training, she believes in a gentle yet effective approach that enhances mobility, strength, and overall body awareness. Her teaching style is steady and intentional, guiding students through controlled movements that build core stability and improve posture without unnecessary strain. Emma emphasizes the importance of breath control and proper form, ensuring that each exercise is performed safely and efficiently. Her classes are ideal for individuals recovering from injuries, those looking to improve functional movement, or anyone seeking a low-impact yet highly effective workout. She encourages her students to develop a deeper connection with their bodies, moving with purpose and awareness rather than speed or intensity. With a calming presence and a patient teaching style, Emma creates a welcoming space where students can focus on gradual progress and sustainable strength. Whether leading a restorative mat class or a reformer session focused on mobility, she helps her students cultivate balance, resilience, and confidence in their movement."
     },
     {
       "name": "James Chen",
       "category": "taichi",
-      "image": "../images/teacher6.png",
+      "image": "../images/team/teacher6.png",
       "title": "Our Tai Chi teacher - The Holistic Wellness Instructor",
       "description": "James Chen is a dedicated Tai Chi instructor who combines movement, breathwork, and mindfulness to help students achieve overall well-being. With a background in both Tai Chi and holistic health practices, he focuses on the therapeutic benefits of this ancient martial art, making his classes particularly beneficial for stress reduction, joint mobility, and mental clarity. His approach is gentle yet structured, ensuring that students develop a deep understanding of Tai Chi’s flowing movements while also experiencing its meditative and healing effects. He specializes in Sun-style Tai Chi, known for its smooth, upright posture and accessibility to people of all abilities, including those with limited mobility. His classes often integrate elements of Qigong, encouraging students to cultivate inner energy and enhance body awareness. James fosters a peaceful and supportive learning environment where students feel comfortable progressing at their own pace. He believes that Tai Chi is a lifelong practice that nurtures both the body and the mind, helping individuals move through life with greater ease and mindfulness. Whether guiding a small group or offering private sessions, his teaching embodies patience, compassion, and a deep commitment to holistic well-being."
     }

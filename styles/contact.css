@@ -10,7 +10,7 @@ body {
 
 .startImage {
   grid-area: startImage;
-  background-image: url("../images/contactpage.jpg");
+  background-image: url("../images/contact/contactpage.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;

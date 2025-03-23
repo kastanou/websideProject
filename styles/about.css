@@ -14,7 +14,7 @@ body {
 
 .startImage {
   grid-area: startImage;
-  background-image: url("../images/14796597.jpg");
+  background-image: url("../images/about/14796597.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;

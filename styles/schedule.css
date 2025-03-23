@@ -12,7 +12,7 @@ body {
 
 .startImage {
   grid-area: startImage;
-  background-image: url("../images/schedule.jpg");
+  background-image: url("../images/schedule/schedule.jpg");
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -213,7 +213,7 @@ body {
 
 .newsletterArea {
   grid-area: newsletterArea;
-  background-image: url("../images/yoga-park_249974-26055.jpg");
+  background-image: url("../images/schedule/yoga-park_249974-26055.jpg");
   background-size: cover;
   background-position: center;
   background-color: var(--body-color);
@@ -241,6 +241,7 @@ body {
 }
 .newsletterBox input[type="email"] {
   width: 50%;
+  height: 2.5rem;
   padding: 0.5rem;
   border: 1px solid #333;
   border-radius: 4px;
@@ -323,9 +324,9 @@ body {
   }
 
   .newsletterBox .btn {
-    width: 50%;
-    text-align: center;
-    padding: 0.7rem;
+    width: 30%;
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 }
 
