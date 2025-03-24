@@ -168,9 +168,9 @@ iframe {
     padding: 0.8rem;
   }
   .contactDetails {
-    padding: 2rem;
+    padding: 2.5rem;
     width: 100vw;
-    height: 40vh;
+    height: 50vh;
   }
   .contactForm {
     padding-right: 1rem;
@@ -178,7 +178,8 @@ iframe {
   }
 
   .contactDetails li {
-    justify-content: center;
+    justify-content: left;
+    padding-left: 1rem;
   }
 
   .contactForm input,
@@ -221,15 +222,9 @@ iframe {
     font-size: 1.25rem;
   }
 
-  .contactDetails li {
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-  }
-
   .contactDetails img {
-    width: 1.125rem;
-    height: 1.125rem;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .contactForm input,

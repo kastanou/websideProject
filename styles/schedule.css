@@ -283,10 +283,10 @@ body {
   }
 
   .pricingHeader h2 {
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
   }
   .pricingHeader p {
-    margin-left: 0.5rem;
+    margin-left: 1.5rem;
   }
   .pricingCards {
     flex-direction: column;
